@@ -1,0 +1,12 @@
+#nav{
+  padding: 2%;
+  background: linear-gradient(to right, #8F0a0a, #f25353, #F61919);
+}
+
+nav{
+  align-content: center;
+}
+
+a{
+  color: whitesmoke !important
+}
