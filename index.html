@@ -16,9 +16,9 @@
   <div id="nav" class="container-fluid sticky-top navbar-light">
     <div class="row">
       <div class="col">
-        <a class="navbar-brand" href="#">Mascotamania ALSINA</a>
+        <a class="navbar-brand" href="#"><img src="img/LogoMascotaManía Blanco.png" style="width:200px;height:77px;" alt=""></a>
       </div>
-      <div class="col-8">
+      <div class="col-sm-8">
         <form class="d-flex">
           <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
           <button class="btn btn-outline-success" type="submit">Search</button>
@@ -32,8 +32,17 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-            <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="#">Mascotas</a>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Mascotas
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <li><a class="dropdown-item" href="#">Perros</a></li>
+                <li><a class="dropdown-item" href="#">Gastos</a></li>
+                <li><a class="dropdown-item" href="#">Roedores</a></li>
+                <li><a class="dropdown-item" href="#">Aves</a></li>
+                <li><a class="dropdown-item" href="#">Peces</a></li>
+              </ul>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="#">Marcas</a>
@@ -51,8 +60,59 @@
   </div>
 
   <!-- Cards -->
+  <div id="cards">
+    <div class="row row-cols-1 row-cols-md-3 g-4">
+      <div class="col">
+        <div class="card h-100">
+          <img src="..." class="card-img-top" alt="...">
+          <div id="card">
+            <p id="card">Veterinaria</p>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card h-100">
+          <img src="..." class="card-img-top" alt="...">
+          <div id="card">
+            <p id="card">PetShop</p>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card h-100">
+          <img src="..." class="card-img-top" alt="...">
+          <div id="card">
+            <p id="card">Peluquería</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 
   <!-- Marcas -->
+  <div id="marcas">
+    <div class="row row-cols-1 row-cols-md-3 g-4">
+      <div class="col">
+        <div class="card h-100">
+          <img src="..." class="card-img-top" alt="...">
+      </div>
+      <div class="col">
+        <div class="card h-100">
+          <img src="..." class="card-img-top" alt="...">
+        </div>
+      </div>
+      <div class="col">
+        <div class="card h-100">
+          <img src="..." class="card-img-top" alt="...">
+        </div>
+      </div>
+      <div class="col">
+        <div class="card h-100">
+          <img src="..." class="card-img-top" alt="...">
+        </div>
+      </div>
+    </div>
+  </div>
 
   <!-- Nosotros -->
 

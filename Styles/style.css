@@ -3,10 +3,33 @@
   background: linear-gradient(to right, #8F0a0a, #f25353, #F61919);
 }
 
-nav{
-  align-content: center;
-}
-
 a{
   color: whitesmoke !important
+}
+
+#cards{
+  padding-left: 5%;
+  padding-right: 5%;
+  padding-top: 40px;
+}
+
+div#card{
+  background-color: #F61919;
+  height: 50px;
+  display: flex !important;
+  justify-content: center;
+  align-items: center;
+}
+
+p#card{
+  color: whitesmoke;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-weight: bold;
+  font-size: 18px;
+  font-style: italic;
+  margin: 0 auto;
+}
+
+div#marcas{
+  background-color: #FFF0F0;
 }
