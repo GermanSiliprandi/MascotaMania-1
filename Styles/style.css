@@ -1,3 +1,7 @@
+body{
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
 #nav{
   padding: 2%;
   background: linear-gradient(to right, #8F0a0a, #f25353, #F61919);
@@ -23,7 +27,6 @@ div#card{
 
 p#card{
   color: whitesmoke;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   font-weight: bold;
   font-size: 18px;
   font-style: italic;
@@ -40,7 +43,6 @@ a#menu{
 }
 
 h1{
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   font-weight: bold;
   text-align: center;
   font-style: italic;
