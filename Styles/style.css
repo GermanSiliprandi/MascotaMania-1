@@ -2,8 +2,7 @@ body{
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-#nav{
-  padding: 2%;
+div#nav{
   background: linear-gradient(to right, #8F0a0a, #f25353, #F61919);
 }
 
@@ -11,10 +10,20 @@ a{
   color: whitesmoke !important
 }
 
-#cards{
+a#menu{
+  color: #F61919 !important;
+}
+
+div#imgnav{
+  background-image: url("/img/nav.png");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+div#cards{
   padding-left: 5%;
   padding-right: 5%;
-  padding-top: 40px;
+  padding-top: 80px;
 }
 
 div#card{
@@ -38,12 +47,9 @@ div#marcas{
   margin-top: 30px;  
 }
 
-a#menu{
-  color: #F61919 !important;
-}
-
 h1{
   font-weight: bold;
   text-align: center;
   font-style: italic;
+  margin-bottom: 25px !important;
 }
