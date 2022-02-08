@@ -42,9 +42,10 @@ p#card{
   margin: 0 auto;
 }
 
-div#marcas{
+div#rosa{
   background-color: #FFF0F0;
-  margin-top: 30px;  
+  margin-top: 50px;
+  padding-top: 15px;
 }
 
 h1{
@@ -52,4 +53,81 @@ h1{
   text-align: center;
   font-style: italic;
   margin-bottom: 25px !important;
+}
+
+div#blanco{
+  margin-top: 50px;
+  padding: 0 15px;
+}
+
+p#nosotros{
+  text-align: justify;
+  padding-top: 10px;
+}
+
+img#nosotros{
+  width: 100%;
+}
+
+iframe{
+  width: 100%;
+  height: auto;
+}
+
+div#hr{
+  padding: 15px;
+}
+
+div#local{
+  float: left;
+}
+
+div#vet{
+  float: right;
+}
+
+div.clearfix {
+  clear:both;
+}
+
+@media (min-width: 1024px) {
+  div#blanco{
+    justify-content: center;
+    height: 350px;
+  }
+
+  img#nosotros {
+    width: 30%;
+    height: auto;
+    float: left;
+  }
+
+  p#nosotros {
+    width: 70%;
+    float: right;
+    padding-left: 10px;
+    padding-top: 30px; 
+  }
+
+  div#mapa{
+    width: 50%;
+    float: left;
+    justify-content: center;
+  }
+
+  div#datos{
+    background-color: #FFF0F0;
+    width: 50%;
+    float: right;
+  }
+
+  iframe{
+    width: 600px;
+    height: 450px;
+  }
+
+  div.mapa{
+    height: 480px;
+  }
+
 }
