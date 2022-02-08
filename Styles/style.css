@@ -42,7 +42,7 @@ p#card{
   margin: 0 auto;
 }
 
-div#rosa{
+div.rosa{
   background-color: #FFF0F0;
   margin-top: 50px;
   padding-top: 15px;
@@ -55,7 +55,7 @@ h1{
   margin-bottom: 25px !important;
 }
 
-div#blanco{
+div.blanco{
   margin-top: 50px;
   padding: 0 15px;
 }
@@ -80,18 +80,47 @@ div#hr{
 
 div#local{
   float: left;
+  width: 50%;
 }
 
 div#vet{
   float: right;
+  width: 50%;
 }
 
 div.clearfix {
   clear:both;
 }
 
+div.logo{
+  width: 40%;
+  text-align: center; 
+  margin-bottom: 15px;
+}
+
+div.seccion{
+  width: 25%;
+  float: left;
+}
+
+#footer{
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+}
+.seccion>h3{
+  color: #F61919;
+  font-style: italic;
+  font-size: medium;
+}
+
+.seccion>p{
+  color: #707070;
+  font-size: small;
+}
+
 @media (min-width: 1024px) {
-  div#blanco{
+  div.blanco{
     justify-content: center;
     height: 350px;
   }
@@ -119,6 +148,7 @@ div.clearfix {
     background-color: #FFF0F0;
     width: 50%;
     float: right;
+
   }
 
   iframe{
@@ -126,8 +156,18 @@ div.clearfix {
     height: 450px;
   }
 
-  div.mapa{
+  div#ubi{
     height: 480px;
+  }
+
+  div.seccion{
+    width: 15%;
+    float: left;
+    color: #F61919;
+  }
+
+  div.logo{ 
+    float: left;
   }
 
 }
