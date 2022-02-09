@@ -1,0 +1,180 @@
+body{
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.hidden{
+  display: none;
+}
+
+div#nav{
+  background: linear-gradient(to right, #8F0a0a, #f25353, #F61919);
+}
+
+a{
+  color: whitesmoke !important
+}
+
+a.menu{
+  color: #F61919 !important;
+}
+
+div#imgnav{
+  background-image: url("/img/nav.png");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+div#cards{
+  padding-left: 5%;
+  padding-right: 5%;
+  padding-top: 80px;
+}
+
+div#card{
+  background-color: #F61919;
+  height: 50px;
+  display: flex !important;
+  justify-content: center;
+  align-items: center;
+}
+
+p#card{
+  color: whitesmoke;
+  font-weight: bold;
+  font-size: 18px;
+  font-style: italic;
+  margin: 0 auto;
+}
+
+div.rosa{
+  background-color: #FFF0F0;
+  margin-top: 50px;
+  padding: 0 15px;
+}
+
+h1{
+  font-weight: bold;
+  text-align: center;
+  font-style: italic;
+  margin-bottom: 25px !important;
+}
+
+h2{
+  color: #707070;
+}
+
+div.blanco{
+  margin-top: 50px;
+  padding: 0 15px;
+}
+
+p#nosotros{
+  text-align: justify;
+  padding-top: 10px;
+}
+
+img#nosotros{
+  width: 100%;
+}
+
+iframe{
+  width: 100%;
+  height: auto;
+}
+
+div#hr{
+  padding: 15px;
+}
+
+div#local{
+  float: left;
+  width: 50%;
+}
+
+div#vet{
+  float: right;
+  width: 50%;
+}
+
+div.clearfix {
+  clear:both;
+}
+
+div.logo{
+  width: 40%;
+  text-align: center; 
+  margin-bottom: 15px;
+}
+
+div.seccion{
+  width: 25%;
+  float: left;
+}
+
+#footer{
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+}
+.seccion>h3{
+  color: #F61919;
+  font-style: italic;
+  font-size: medium;
+}
+
+.seccion>p{
+  color: #707070;
+  font-size: small;
+}
+
+@media (min-width: 1024px) {
+  div.blanco{
+    justify-content: center;
+  }
+
+  img#nosotros {
+    width: 30%;
+    height: auto;
+    float: left;
+  }
+
+  p#nosotros {
+    width: 70%;
+    float: right;
+    padding-left: 10px;
+    padding-top: 30px; 
+  }
+
+  div#mapa{
+    width: 50%;
+    float: left;
+    justify-content: center;
+  }
+
+  div#datos{
+    background-color: #FFF0F0;
+    width: 50%;
+    float: right;
+
+  }
+
+  iframe{
+    width: 600px;
+    height: 450px;
+  }
+
+  div#ubi{
+    height: 480px;
+  }
+
+  div.seccion{
+    width: 15%;
+    float: left;
+    color: #F61919;
+  }
+
+  div.logo{ 
+    float: left;
+  }
+
+}
