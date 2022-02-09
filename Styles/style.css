@@ -2,6 +2,10 @@ body{
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
+.hidden{
+  display: none;
+}
+
 div#nav{
   background: linear-gradient(to right, #8F0a0a, #f25353, #F61919);
 }
@@ -10,7 +14,7 @@ a{
   color: whitesmoke !important
 }
 
-a#menu{
+a.menu{
   color: #F61919 !important;
 }
 
@@ -45,7 +49,7 @@ p#card{
 div.rosa{
   background-color: #FFF0F0;
   margin-top: 50px;
-  padding-top: 15px;
+  padding: 0 15px;
 }
 
 h1{
@@ -53,6 +57,10 @@ h1{
   text-align: center;
   font-style: italic;
   margin-bottom: 25px !important;
+}
+
+h2{
+  color: #707070;
 }
 
 div.blanco{
@@ -122,7 +130,6 @@ div.seccion{
 @media (min-width: 1024px) {
   div.blanco{
     justify-content: center;
-    height: 350px;
   }
 
   img#nosotros {
