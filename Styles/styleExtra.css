@@ -86,9 +86,20 @@ div.seccion{
   font-size: small;
 }
 
+p.info{
+  text-align: justify;
+  padding-top: 10px;
+}
+
+img.info{
+  width: 100%;
+}
+
 @media (min-width: 1024px) {
-  div.blanco{
+  div.blanco, div.rosa{
     justify-content: center;
+    display: flex;
+    align-items: center;
   }
 
   div.seccion{
@@ -101,4 +112,14 @@ div.seccion{
     float: left;
   }
 
+  img.info {
+    width: 30%;
+    height: auto;
+    margin: 30px;
+  }
+
+  p.info {
+    width: 70%;
+    text-align: justify !important;
+  }
 }
