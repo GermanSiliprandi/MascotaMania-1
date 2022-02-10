@@ -120,6 +120,6 @@ img.info{
 
   p.info {
     width: 70%;
-    text-align: justify !important;
+    text-align: justify;
   }
 }
