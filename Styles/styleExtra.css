@@ -95,6 +95,33 @@ img.info{
   width: 100%;
 }
 
+div#cards{
+  padding-left: 5%;
+  padding-right: 5%;
+  padding-top: 80px;
+}
+
+div.card{
+  border: none;
+}
+
+div#card{
+  background-color: #F61919;
+  height: 50px;
+  display: flex !important;
+  justify-content: center;
+  align-items: center;
+  border-radius: 0 0 20px 20px;
+}
+
+p#card{
+  color: whitesmoke;
+  font-weight: bold;
+  font-size: 18px;
+  font-style: italic;
+  margin: 0 auto;
+}
+
 @media (min-width: 1024px) {
   div.blanco, div.rosa{
     justify-content: center;
@@ -121,5 +148,9 @@ img.info{
   p.info {
     width: 70%;
     text-align: justify;
+  }
+
+  div#cards{
+    justify-content: center;
   }
 }
