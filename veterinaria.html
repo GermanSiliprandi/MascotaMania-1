@@ -1,145 +1,346 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  
-  <link rel="stylesheet" href="Styles/styleExtra.css">
-  
-  <!-- Bootstrap CSS -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
-  <title>MascotaMania</title>
-</head>
-<body>
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <!-- Navbar -->
-  <div id="nav" class="sticky-top" style="padding-top: 10px;">
-    <div class="container-fluid navbar-light">
-      <div class="row">
-        <div class="col">
-          <a class="navbar-brand" href="index.html"><img src="img/LogoMascotaManía Blanco.png" style="width:200px;height:77px;" alt=""></a>
-        </div>
-        <div class="col-sm-8">
-          <div class="dir">
-            <p class="dir"><svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
-              width="24" height="24"
-              viewBox="0 0 172 172"
-              style=" fill:#000000;"><g fill="none" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal"><path d="M0,172v-172h172v172z" fill="none"></path><g fill="#ffffff"><path d="M86,14.33333c-27.70633,0 -50.16667,22.46033 -50.16667,50.16667c0,35.83333 50.16667,93.16667 50.16667,93.16667c0,0 50.16667,-57.33333 50.16667,-93.16667c0,-27.70633 -22.46033,-50.16667 -50.16667,-50.16667zM86,82.41667c-9.89717,0 -17.91667,-8.0195 -17.91667,-17.91667c0,-9.89717 8.0195,-17.91667 17.91667,-17.91667c9.89717,0 17.91667,8.0195 17.91667,17.91667c0,9.89717 -8.0195,17.91667 -17.91667,17.91667z"></path></g></g></svg> Alsina 41, San Isidro, Buenos Aires - <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
-              width="24" height="24"
-              viewBox="0 0 172 172"
-              style=" fill:#000000;"><g fill="none" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal"><path d="M0,172v-172h172v172z" fill="none"></path><g fill="#ffffff"><path d="M113.52,17.2h-55.04v-13.76c0,-1.89469 -1.54531,-3.44 -3.44,-3.44h-10.32c-1.89469,0 -3.44,1.54531 -3.44,3.44v134.16c0,12.7925 12.02656,20.64 20.64,20.64h51.6c9.48688,0 17.2,-7.71312 17.2,-17.2v-106.64c0,-9.48687 -7.71312,-17.2 -17.2,-17.2zM65.36,144.48c-3.80281,0 -6.88,-3.07719 -6.88,-6.88c0,-3.80281 3.07719,-6.88 6.88,-6.88c3.80281,0 6.88,3.07719 6.88,6.88c0,3.80281 -3.07719,6.88 -6.88,6.88zM65.36,123.84c-3.80281,0 -6.88,-3.07719 -6.88,-6.88c0,-3.80281 3.07719,-6.88 6.88,-6.88c3.80281,0 6.88,3.07719 6.88,6.88c0,3.80281 -3.07719,6.88 -6.88,6.88zM65.36,103.2c-3.80281,0 -6.88,-3.07719 -6.88,-6.88c0,-3.80281 3.07719,-6.88 6.88,-6.88c3.80281,0 6.88,3.07719 6.88,6.88c0,3.80281 -3.07719,6.88 -6.88,6.88zM86,144.48c-3.80281,0 -6.88,-3.07719 -6.88,-6.88c0,-3.80281 3.07719,-6.88 6.88,-6.88c3.80281,0 6.88,3.07719 6.88,6.88c0,3.80281 -3.07719,6.88 -6.88,6.88zM86,123.84c-3.80281,0 -6.88,-3.07719 -6.88,-6.88c0,-3.80281 3.07719,-6.88 6.88,-6.88c3.80281,0 6.88,3.07719 6.88,6.88c0,3.80281 -3.07719,6.88 -6.88,6.88zM86,103.2c-3.80281,0 -6.88,-3.07719 -6.88,-6.88c0,-3.80281 3.07719,-6.88 6.88,-6.88c3.80281,0 6.88,3.07719 6.88,6.88c0,3.80281 -3.07719,6.88 -6.88,6.88zM106.64,144.48c-3.80281,0 -6.88,-3.07719 -6.88,-6.88c0,-3.80281 3.07719,-6.88 6.88,-6.88c3.80281,0 6.88,3.07719 6.88,6.88c0,3.80281 -3.07719,6.88 -6.88,6.88zM106.64,123.84c-3.80281,0 -6.88,-3.07719 -6.88,-6.88c0,-3.80281 3.07719,-6.88 6.88,-6.88c3.80281,0 6.88,3.07719 6.88,6.88c0,3.80281 -3.07719,6.88 -6.88,6.88zM106.64,103.2c-3.80281,0 -6.88,-3.07719 -6.88,-6.88c0,-3.80281 3.07719,-6.88 6.88,-6.88c3.80281,0 6.88,3.07719 6.88,6.88c0,3.80281 -3.07719,6.88 -6.88,6.88zM113.52,72.24c0,3.78938 -3.09062,6.88 -6.88,6.88h-41.28c-3.78937,0 -6.88,-3.09062 -6.88,-6.88v-27.52c0,-3.78937 3.09063,-6.88 6.88,-6.88h41.28c3.78938,0 6.88,3.09063 6.88,6.88z"></path></g></g></svg> 4747 - 3518 / 11 3226 - 1037</p>
-          </div>
-        </div>
-      </div>
-      <nav class="navbar navbar-expand-lg navbar-light">
-        <div class="container-fluid">
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse row" id="navbarSupportedContent" style="justify-content: space-between;">
-            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-              <li class="nav-item dropdown col-3" style="text-align: center;">
-                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                  Mascotas
-                </a>
-                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                  <li><a class="dropdown-item menu" href="/perros.html">Perros</a></li>
-                  <li><a class="dropdown-item menu" href="/gatos.html">Gatos</a></li>
-                  <li><a class="dropdown-item menu" href="/roedores.html">Roedores</a></li>
-                  <li><a class="dropdown-item menu" href="/aves.html">Aves</a></li>
-                  <li><a class="dropdown-item menu" href="/peces.html">Peces</a></li>
-                </ul>
-              </li>
-              <li class="nav-item col-3" style="text-align: center;">
-                <a class="nav-link" href="index.html#marcas">Marcas</a>
-              </li>
-              <li class="nav-item dropdown col-3" style="text-align: center;">
-                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                  Servicios
-                </a>
-                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                  <li><a class="dropdown-item menu" href="/veterinaria.html">Veterinaria</a></li>
-                  <li><a class="dropdown-item menu" href="/peluqueria.html">Peluqueria</a></li>
-                </ul>
-              </li>
-              <li class="nav-item col-3" style="text-align: center;">
-                <a class="nav-link" href="index.html#contacto">Contacto</a>
-              </li>
-            </ul>
-          </div>
-        </div> 
-      </nav>
-    </div>
-    </div>
-    <div id="nav" style="height:189px;">
-      <h3 style="color: whitesmoke; padding-top: 10px;">Veterinaria</h3>
-    <div id="imgnav" style="height:180px;"></div> 
-  </div>
+		<link rel="stylesheet" href="Styles/styleExtra.css" />
 
-  <!-- Veterinaria -->
-  <div class="blanco">
-    <img src="img/local1.jpeg" alt="" class="info" />
-    <p class="info" >En Mascotamania Alsina contamos con múltiples servicios pensados para cuidar a tu mascota.<br>Servicios:<br>
-    - Consultorio<br>
-    - Análisis Clínicos<br>
-    - Aplicación de Chips<br>
-    - Cirugías (programadas)<br>
-    - Estudios Cardiológicos (programadas)<br>
-    - Ecografías (programadas)<br>
-    <br>
-    Horario: Lunes, Miércoles y Viernes de 10 a 19hs / Martes y Jueves de 10 a 17hs.<br>
-    <br>
-    Escribinos por WhatsApp o llamanos para solicitar turnos y hacer tus consultas.
-    </p>
-  </div>
+		<!-- Bootstrap CSS -->
+		<link
+			href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+			rel="stylesheet"
+			integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
+			crossorigin="anonymous"
+		/>
+		<title>MascotaMania</title>
+	</head>
+	<body>
+		<!-- Navbar -->
+		<div id="nav" class="sticky-top" style="padding-top: 10px">
+			<div class="container-fluid navbar-light">
+				<div class="row">
+					<div class="col">
+						<a class="navbar-brand" href="index.html"
+							><img
+								src="img/LogoMascotaManía Blanco.png"
+								style="width: 200px; height: 77px"
+								alt=""
+						/></a>
+					</div>
+					<div class="col-sm-8">
+						<div class="dir">
+							<p class="dir">
+								<svg
+									xmlns="http://www.w3.org/2000/svg"
+									x="0px"
+									y="0px"
+									width="24"
+									height="24"
+									viewBox="0 0 172 172"
+									style="fill: #000000"
+								>
+									<g
+										fill="none"
+										fill-rule="nonzero"
+										stroke="none"
+										stroke-width="1"
+										stroke-linecap="butt"
+										stroke-linejoin="miter"
+										stroke-miterlimit="10"
+										stroke-dasharray=""
+										stroke-dashoffset="0"
+										font-family="none"
+										font-weight="none"
+										font-size="none"
+										text-anchor="none"
+										style="mix-blend-mode: normal"
+									>
+										<path
+											d="M0,172v-172h172v172z"
+											fill="none"
+										></path>
+										<g fill="#ffffff">
+											<path
+												d="M86,14.33333c-27.70633,0 -50.16667,22.46033 -50.16667,50.16667c0,35.83333 50.16667,93.16667 50.16667,93.16667c0,0 50.16667,-57.33333 50.16667,-93.16667c0,-27.70633 -22.46033,-50.16667 -50.16667,-50.16667zM86,82.41667c-9.89717,0 -17.91667,-8.0195 -17.91667,-17.91667c0,-9.89717 8.0195,-17.91667 17.91667,-17.91667c9.89717,0 17.91667,8.0195 17.91667,17.91667c0,9.89717 -8.0195,17.91667 -17.91667,17.91667z"
+											></path>
+										</g>
+									</g>
+								</svg>
+								Alsina 41, San Isidro, Buenos Aires -
+								<svg
+									xmlns="http://www.w3.org/2000/svg"
+									x="0px"
+									y="0px"
+									width="24"
+									height="24"
+									viewBox="0 0 172 172"
+									style="fill: #000000"
+								>
+									<g
+										fill="none"
+										fill-rule="nonzero"
+										stroke="none"
+										stroke-width="1"
+										stroke-linecap="butt"
+										stroke-linejoin="miter"
+										stroke-miterlimit="10"
+										stroke-dasharray=""
+										stroke-dashoffset="0"
+										font-family="none"
+										font-weight="none"
+										font-size="none"
+										text-anchor="none"
+										style="mix-blend-mode: normal"
+									>
+										<path
+											d="M0,172v-172h172v172z"
+											fill="none"
+										></path>
+										<g fill="#ffffff">
+											<path
+												d="M113.52,17.2h-55.04v-13.76c0,-1.89469 -1.54531,-3.44 -3.44,-3.44h-10.32c-1.89469,0 -3.44,1.54531 -3.44,3.44v134.16c0,12.7925 12.02656,20.64 20.64,20.64h51.6c9.48688,0 17.2,-7.71312 17.2,-17.2v-106.64c0,-9.48687 -7.71312,-17.2 -17.2,-17.2zM65.36,144.48c-3.80281,0 -6.88,-3.07719 -6.88,-6.88c0,-3.80281 3.07719,-6.88 6.88,-6.88c3.80281,0 6.88,3.07719 6.88,6.88c0,3.80281 -3.07719,6.88 -6.88,6.88zM65.36,123.84c-3.80281,0 -6.88,-3.07719 -6.88,-6.88c0,-3.80281 3.07719,-6.88 6.88,-6.88c3.80281,0 6.88,3.07719 6.88,6.88c0,3.80281 -3.07719,6.88 -6.88,6.88zM65.36,103.2c-3.80281,0 -6.88,-3.07719 -6.88,-6.88c0,-3.80281 3.07719,-6.88 6.88,-6.88c3.80281,0 6.88,3.07719 6.88,6.88c0,3.80281 -3.07719,6.88 -6.88,6.88zM86,144.48c-3.80281,0 -6.88,-3.07719 -6.88,-6.88c0,-3.80281 3.07719,-6.88 6.88,-6.88c3.80281,0 6.88,3.07719 6.88,6.88c0,3.80281 -3.07719,6.88 -6.88,6.88zM86,123.84c-3.80281,0 -6.88,-3.07719 -6.88,-6.88c0,-3.80281 3.07719,-6.88 6.88,-6.88c3.80281,0 6.88,3.07719 6.88,6.88c0,3.80281 -3.07719,6.88 -6.88,6.88zM86,103.2c-3.80281,0 -6.88,-3.07719 -6.88,-6.88c0,-3.80281 3.07719,-6.88 6.88,-6.88c3.80281,0 6.88,3.07719 6.88,6.88c0,3.80281 -3.07719,6.88 -6.88,6.88zM106.64,144.48c-3.80281,0 -6.88,-3.07719 -6.88,-6.88c0,-3.80281 3.07719,-6.88 6.88,-6.88c3.80281,0 6.88,3.07719 6.88,6.88c0,3.80281 -3.07719,6.88 -6.88,6.88zM106.64,123.84c-3.80281,0 -6.88,-3.07719 -6.88,-6.88c0,-3.80281 3.07719,-6.88 6.88,-6.88c3.80281,0 6.88,3.07719 6.88,6.88c0,3.80281 -3.07719,6.88 -6.88,6.88zM106.64,103.2c-3.80281,0 -6.88,-3.07719 -6.88,-6.88c0,-3.80281 3.07719,-6.88 6.88,-6.88c3.80281,0 6.88,3.07719 6.88,6.88c0,3.80281 -3.07719,6.88 -6.88,6.88zM113.52,72.24c0,3.78938 -3.09062,6.88 -6.88,6.88h-41.28c-3.78937,0 -6.88,-3.09062 -6.88,-6.88v-27.52c0,-3.78937 3.09063,-6.88 6.88,-6.88h41.28c3.78938,0 6.88,3.09063 6.88,6.88z"
+											></path>
+										</g>
+									</g>
+								</svg>
+								4747 - 3518 / 11 3226 - 1037
+							</p>
+						</div>
+					</div>
+				</div>
+				<nav class="navbar navbar-expand-lg navbar-light">
+					<div class="container-fluid">
+						<button
+							class="navbar-toggler"
+							type="button"
+							data-bs-toggle="collapse"
+							data-bs-target="#navbarSupportedContent"
+							aria-controls="navbarSupportedContent"
+							aria-expanded="false"
+							aria-label="Toggle navigation"
+						>
+							<span class="navbar-toggler-icon"></span>
+						</button>
+						<div
+							class="collapse navbar-collapse row"
+							id="navbarSupportedContent"
+							style="justify-content: space-between"
+						>
+							<ul class="navbar-nav me-auto mb-2 mb-lg-0">
+								<li
+									class="nav-item dropdown col-3"
+									style="text-align: center"
+								>
+									<a
+										class="nav-link dropdown-toggle"
+										href="#"
+										id="navbarDropdown"
+										role="button"
+										data-bs-toggle="dropdown"
+										aria-expanded="false"
+									>
+										Mascotas
+									</a>
+									<ul
+										class="dropdown-menu"
+										aria-labelledby="navbarDropdown"
+									>
+										<li>
+											<a
+												class="dropdown-item menu"
+												href="/perros.html"
+												>Perros</a
+											>
+										</li>
+										<li>
+											<a
+												class="dropdown-item menu"
+												href="/gatos.html"
+												>Gatos</a
+											>
+										</li>
+										<li>
+											<a
+												class="dropdown-item menu"
+												href="/roedores.html"
+												>Roedores</a
+											>
+										</li>
+										<li>
+											<a
+												class="dropdown-item menu"
+												href="/aves.html"
+												>Aves</a
+											>
+										</li>
+										<li>
+											<a
+												class="dropdown-item menu"
+												href="/peces.html"
+												>Peces</a
+											>
+										</li>
+									</ul>
+								</li>
+								<li
+									class="nav-item col-3"
+									style="text-align: center"
+								>
+									<a class="nav-link" href="index.html#marcas"
+										>Marcas</a
+									>
+								</li>
+								<li
+									class="nav-item dropdown col-3"
+									style="text-align: center"
+								>
+									<a
+										class="nav-link dropdown-toggle"
+										href="#"
+										id="navbarDropdown"
+										role="button"
+										data-bs-toggle="dropdown"
+										aria-expanded="false"
+									>
+										Servicios
+									</a>
+									<ul
+										class="dropdown-menu"
+										aria-labelledby="navbarDropdown"
+									>
+										<li>
+											<a
+												class="dropdown-item menu"
+												href="/veterinaria.html"
+												>Veterinaria</a
+											>
+										</li>
+										<li>
+											<a
+												class="dropdown-item menu"
+												href="/peluqueria.html"
+												>Peluqueria</a
+											>
+										</li>
+									</ul>
+								</li>
+								<li
+									class="nav-item col-3"
+									style="text-align: center"
+								>
+									<a
+										class="nav-link"
+										href="index.html#contacto"
+										>Contacto</a
+									>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</nav>
+			</div>
+		</div>
+		<div id="nav" style="height: 189px">
+			<h3 style="color: whitesmoke; padding-top: 10px">Veterinaria</h3>
+			<div id="imgnav" style="height: 180px"></div>
+		</div>
 
-  <!-- Farmacia -->
-  <div class="rosa" >
-    <div style="width: 70%;">
-      <h1>Farmacias</h1>
-      <p class="info" style="width: 100%;">
-        En Mascotamania Alsina contamos con una gran variedad de medicamentos para tu mascota. Nuestros veterinarios se encargan de su correcta administración y supervisión.
-      </p>
-    </div>
-    <img src="img/Farmacia.jpeg" alt="" class="info" />
-  </div>
+		<!-- Veterinaria -->
+		<div class="blanco">
+			<img src="img/local1.jpeg" alt="" class="info" />
+			<p class="info">
+				En Mascotamania Alsina contamos con múltiples servicios pensados
+				para cuidar a tu mascota.<br />Servicios:<br />
+				- Consultorio<br />
+				- Análisis Clínicos<br />
+				- Aplicación de Chips<br />
+				- Cirugías (programadas)<br />
+				- Estudios Cardiológicos (programadas)<br />
+				- Ecografías (programadas)<br />
+				<br />
+				Horario: Lunes, Miércoles y Viernes de 10 a 19hs / Martes y
+				Jueves de 10 a 17hs.<br />
+				<br />
+				Escribinos por WhatsApp o llamanos para solicitar turnos y hacer
+				tus consultas.
+			</p>
+		</div>
 
-  <!-- Divisor -->
-  <div class="blanco" style="height: 50px;">
+		<!-- Farmacia -->
+		<div class="rosa">
+			<div style="width: 70%">
+				<h1>Farmacias</h1>
+				<p class="info" style="width: 100%">
+					En Mascotamania Alsina contamos con una gran variedad de
+					medicamentos para tu mascota. Nuestros veterinarios se
+					encargan de su correcta administración y supervisión.
+				</p>
+			</div>
+			<img src="img/Farmacia.jpeg" alt="" class="info" />
+		</div>
 
-  </div>
-  
-  <!-- Footer -->
-  <div class="rosa" style="padding: 25px;">
-    <div class="logo">
-      <img id="footer" src="img/LogoMascotaManía.png" style="width:150px;height:auto;margin-bottom: 10px;" alt="">
-      <a href="https://www.instagram.com/mascotamania.alsina41/?hl=es-la"><img src="https://img.icons8.com/ios-glyphs/36/000000/instagram-new.png"/></a>
-      <a href="https://www.youtube.com/channel/UCWL3eiuqkTCPHG4q8HcV7HQ"><img src="https://img.icons8.com/ios-glyphs/36/000000/youtube-play.png"/></a>
+		<!-- Divisor -->
+		<div class="blanco" style="height: 50px"></div>
 
-    </div>
-    <div class="seccion">
-      <a type="button" href="mascotas.html"><h3>Mascotas</h3></a>
-      <p>Perros<br>Gatos<br>Roedores<br>Aves<br>Peces</p>
-    </div>
-    <div class="seccion">
-      <a type="button" href="index.html#marcas"><h3>Marcas</h3></a>
-      <p>Royal Canin<br>Purina<br>Vital Can<br>Eukanuba<br>Old Prince</p>
-    </div>
-    <div class="seccion">
-      <a type="button" href="servicios.html"><h3>Servicios</h3></a>
-      <p>Veterinaria<br>Peluquería<br>Farmacia<br>Análisis Clínicos<br>Cirugías</p>
-    </div>
-    <div class="seccion">
-      <a type="button" href="index.html#contacto"><h3>Contacto</h3></a>
-      <p>Atención Telefónica:<br>4747 - 3518<br>Atencion Whatsapp:<br>+54 11 3226 1037</p>
-    </div>
-    <div class="clearfix"></div>
-  </div>
+		<!-- Footer -->
+		<div class="rosa" style="padding: 25px">
+			<div class="logo">
+				<img
+					id="footer"
+					src="img/LogoMascotaManía.png"
+					style="width: 150px; height: auto; margin-bottom: 10px"
+					alt=""
+				/>
+				<a
+					href="https://www.instagram.com/mascotamania.alsina41/?hl=es-la"
+					><img
+						src="https://img.icons8.com/ios-glyphs/36/000000/instagram-new.png"
+				/></a>
+				<a
+					href="https://www.youtube.com/channel/UCWL3eiuqkTCPHG4q8HcV7HQ"
+					><img
+						src="https://img.icons8.com/ios-glyphs/36/000000/youtube-play.png"
+				/></a>
+			</div>
+			<div class="seccion">
+				<a type="button" href="mascotas.html"><h3>Mascotas</h3></a>
+				<p>Perros<br />Gatos<br />Roedores<br />Aves<br />Peces</p>
+			</div>
+			<div class="seccion">
+				<a type="button" href="index.html#marcas"><h3>Marcas</h3></a>
+				<p>
+					Royal Canin<br />Purina<br />Vital Can<br />Eukanuba<br />Old
+					Prince
+				</p>
+			</div>
+			<div class="seccion">
+				<a type="button" href="servicios.html"><h3>Servicios</h3></a>
+				<p>
+					Veterinaria<br />Peluquería<br />Farmacia<br />Análisis
+					Clínicos<br />Cirugías
+				</p>
+			</div>
+			<div class="seccion">
+				<a type="button" href="index.html#contacto"
+					><h3>Contacto</h3></a
+				>
+				<p>
+					Atención Telefónica:<br />4747 - 3518<br />Atencion
+					Whatsapp:<br />+54 11 3226 1037
+				</p>
+			</div>
+			<div class="clearfix"></div>
+		</div>
 
-  <script src="js/main.js"></script>
-  
-  <!-- Bootstrap Bundle with Popper -->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
-</body>
+		<script src="js/main.js"></script>
+
+		<!-- Bootstrap Bundle with Popper -->
+		<script
+			src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+			integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+			crossorigin="anonymous"
+		></script>
+	</body>
 </html>
