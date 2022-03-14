@@ -482,3 +482,5 @@ async function handleSubmit(event) {
 		});
 }
 form.addEventListener("submit", handleSubmit);
+
+//Productos Perros Secos Scroller
