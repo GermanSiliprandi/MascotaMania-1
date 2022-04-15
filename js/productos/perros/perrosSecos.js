@@ -344,22 +344,22 @@ function productosPerrosSecos() {
 		secosWeight4.innerHTML = perrosSecos[index + 3].weight;
 	}
 	function decreaseProducts(index) {
-		secosImg1.src = perrosSecos[index - 3].img;
-		secosImg2.src = perrosSecos[index - 2].img;
-		secosImg3.src = perrosSecos[index - 1].img;
-		secosImg4.src = perrosSecos[index].img;
-		secosBrand1.innerHTML = perrosSecos[index - 3].brand;
-		secosBrand2.innerHTML = perrosSecos[index - 2].brand;
-		secosBrand3.innerHTML = perrosSecos[index - 1].brand;
-		secosBrand4.innerHTML = perrosSecos[index].brand;
-		secosName1.innerHTML = perrosSecos[index - 3].name;
-		secosName2.innerHTML = perrosSecos[index - 2].name;
-		secosName3.innerHTML = perrosSecos[index - 1].name;
-		secosName4.innerHTML = perrosSecos[index].name;
-		secosWeight1.innerHTML = perrosSecos[index - 3].weight;
-		secosWeight2.innerHTML = perrosSecos[index - 2].weight;
-		secosWeight3.innerHTML = perrosSecos[index - 1].weight;
-		secosWeight4.innerHTML = perrosSecos[index].weight;
+		secosImg1.src = perrosSecos[index - 4].img;
+		secosImg2.src = perrosSecos[index - 3].img;
+		secosImg3.src = perrosSecos[index - 2].img;
+		secosImg4.src = perrosSecos[index - 1].img;
+		secosBrand1.innerHTML = perrosSecos[index - 4].brand;
+		secosBrand2.innerHTML = perrosSecos[index - 3].brand;
+		secosBrand3.innerHTML = perrosSecos[index - 2].brand;
+		secosBrand4.innerHTML = perrosSecos[index - 1].brand;
+		secosName1.innerHTML = perrosSecos[index - 4].name;
+		secosName2.innerHTML = perrosSecos[index - 3].name;
+		secosName3.innerHTML = perrosSecos[index - 2].name;
+		secosName4.innerHTML = perrosSecos[index - 1].name;
+		secosWeight1.innerHTML = perrosSecos[index - 4].weight;
+		secosWeight2.innerHTML = perrosSecos[index - 3].weight;
+		secosWeight3.innerHTML = perrosSecos[index - 2].weight;
+		secosWeight4.innerHTML = perrosSecos[index - 1].weight;
 	}
 	const secosImg1 = document.getElementById("secosImg1");
 	const secosImg2 = document.getElementById("secosImg2");
@@ -398,23 +398,72 @@ function productosPerrosSecos() {
 	secosRightButton.addEventListener("click", moveRight);
 	secosLeftButton.addEventListener("click", moveLeft);
 	let current = 0;
-
+	console.log(perrosSecos.length);
 	function moveRight() {
-		if (current + 3 < perrosSecos.length) {
-			current += 1;
+		if (current >= 0 && current <= perrosSecos.length - 8) {
+			current += 4;
 			increaseProducts(current);
-		} else {
-			current = 0;
-			increaseProducts(current);
+		} else if (
+			current > perrosSecos.length - 8 &&
+			current < perrosSecos.length - 4
+		) {
+			secosImg1.src = perrosSecos[perrosSecos.length - 4].img;
+			secosBrand1.innerHTML = perrosSecos[perrosSecos.length - 4].brand;
+			secosName1.innerHTML = perrosSecos[perrosSecos.length - 4].name;
+			secosWeight1.innerHTML = perrosSecos[perrosSecos.length - 4].weight;
+			secosImg2.src = perrosSecos[perrosSecos.length - 3].img;
+			secosBrand2.innerHTML = perrosSecos[perrosSecos.length - 3].brand;
+			secosName2.innerHTML = perrosSecos[perrosSecos.length - 3].name;
+			secosWeight2.innerHTML = perrosSecos[perrosSecos.length - 3].weight;
+			secosImg3.src = perrosSecos[perrosSecos.length - 2].img;
+			secosBrand3.innerHTML = perrosSecos[perrosSecos.length - 2].brand;
+			secosName3.innerHTML = perrosSecos[perrosSecos.length - 2].name;
+			secosWeight3.innerHTML = perrosSecos[perrosSecos.length - 2].weight;
+			secosImg4.src = perrosSecos[perrosSecos.length - 1].img;
+			secosBrand4.innerHTML = perrosSecos[perrosSecos.length - 1].brand;
+			secosName4.innerHTML = perrosSecos[perrosSecos.length - 1].name;
+			secosWeight4.innerHTML = perrosSecos[perrosSecos.length - 1].weight;
+			current += 4;
+		} else if (current >= 4 && perrosSecos.length < 8) {
+			secosImg1.src = perrosSecos[perrosSecos.length - 4].img;
+			secosBrand1.innerHTML = perrosSecos[perrosSecos.length - 4].brand;
+			secosName1.innerHTML = perrosSecos[perrosSecos.length - 4].name;
+			secosWeight1.innerHTML = perrosSecos[perrosSecos.length - 4].weight;
+			secosImg2.src = perrosSecos[perrosSecos.length - 3].img;
+			secosBrand2.innerHTML = perrosSecos[perrosSecos.length - 3].brand;
+			secosName2.innerHTML = perrosSecos[perrosSecos.length - 3].name;
+			secosWeight2.innerHTML = perrosSecos[perrosSecos.length - 3].weight;
+			secosImg3.src = perrosSecos[perrosSecos.length - 2].img;
+			secosBrand3.innerHTML = perrosSecos[perrosSecos.length - 2].brand;
+			secosName3.innerHTML = perrosSecos[perrosSecos.length - 2].name;
+			secosWeight3.innerHTML = perrosSecos[perrosSecos.length - 2].weight;
+			secosImg4.src = perrosSecos[perrosSecos.length - 1].img;
+			secosBrand4.innerHTML = perrosSecos[perrosSecos.length - 1].brand;
+			secosName4.innerHTML = perrosSecos[perrosSecos.length - 1].name;
+			secosWeight4.innerHTML = perrosSecos[perrosSecos.length - 1].weight;
 		}
 	}
 	function moveLeft() {
-		if (current - 3 > 0) {
-			current -= 1;
+		if (current >= 4 && current <= perrosSecos.length - 1) {
 			decreaseProducts(current);
+			current -= 4;
 		} else {
-			current = perrosSecos.length;
-			decreaseProducts(current);
+			secosImg1.src = perrosSecos[0].img;
+			secosBrand1.innerHTML = perrosSecos[0].brand;
+			secosName1.innerHTML = perrosSecos[0].name;
+			secosWeight1.innerHTML = perrosSecos[0].weight;
+			secosImg2.src = perrosSecos[1].img;
+			secosBrand2.innerHTML = perrosSecos[1].brand;
+			secosName2.innerHTML = perrosSecos[1].name;
+			secosWeight2.innerHTML = perrosSecos[1].weight;
+			secosImg3.src = perrosSecos[2].img;
+			secosBrand3.innerHTML = perrosSecos[2].brand;
+			secosName3.innerHTML = perrosSecos[2].name;
+			secosWeight3.innerHTML = perrosSecos[2].weight;
+			secosImg4.src = perrosSecos[3].img;
+			secosBrand4.innerHTML = perrosSecos[3].brand;
+			secosName4.innerHTML = perrosSecos[3].name;
+			secosWeight4.innerHTML = perrosSecos[3].weight;
 		}
 	}
 }

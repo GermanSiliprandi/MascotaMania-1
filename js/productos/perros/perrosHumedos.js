@@ -1,4 +1,4 @@
-window.onload = function productosPerrosHumedos() {
+function productosPerrosHumedos() {
 	const perrosHumedos = [
 		{
 			img: "img/productos/perros/alimentosHumedos/Imagen56.jpg",
@@ -74,14 +74,14 @@ window.onload = function productosPerrosHumedos() {
 		},
 	];
 	function increaseProducts(index) {
-		img1.src = perrosHumedos[index].img;
-		img2.src = perrosHumedos[index + 1].img;
-		img3.src = perrosHumedos[index + 2].img;
-		img4.src = perrosHumedos[index + 3].img;
-		brand1.innerHTML = perrosHumedos[index].brand;
-		brand2.innerHTML = perrosHumedos[index + 1].brand;
-		brand3.innerHTML = perrosHumedos[index + 2].brand;
-		brand4.innerHTML = perrosHumedos[index + 3].brand;
+		humedosImg1.src = perrosHumedos[index].img;
+		humedosImg2.src = perrosHumedos[index + 1].img;
+		humedosImg3.src = perrosHumedos[index + 2].img;
+		humedosImg4.src = perrosHumedos[index + 3].img;
+		humedosBrand1.innerHTML = perrosHumedos[index].brand;
+		humedosBrand2.innerHTML = perrosHumedos[index + 1].brand;
+		humedosBrand3.innerHTML = perrosHumedos[index + 2].brand;
+		humedosBrand4.innerHTML = perrosHumedos[index + 3].brand;
 		humedosName1.innerHTML = perrosHumedos[index].name;
 		humedosName2.innerHTML = perrosHumedos[index + 1].name;
 		humedosName3.innerHTML = perrosHumedos[index + 2].name;
@@ -92,31 +92,31 @@ window.onload = function productosPerrosHumedos() {
 		humedosWeight4.innerHTML = perrosHumedos[index + 3].weight;
 	}
 	function decreaseProducts(index) {
-		img1.src = perrosHumedos[index - 3].img;
-		img2.src = perrosHumedos[index - 2].img;
-		img3.src = perrosHumedos[index - 1].img;
-		img4.src = perrosHumedos[index].img;
-		brand1.innerHTML = perrosHumedos[index - 3].brand;
-		brand2.innerHTML = perrosHumedos[index - 2].brand;
-		brand3.innerHTML = perrosHumedos[index - 1].brand;
-		brand4.innerHTML = perrosHumedos[index].brand;
-		humedosName1.innerHTML = perrosHumedos[index - 3].name;
-		humedosName2.innerHTML = perrosHumedos[index - 2].name;
-		humedosName3.innerHTML = perrosHumedos[index - 1].name;
-		humedosName4.innerHTML = perrosHumedos[index].name;
-		humedosWeight1.innerHTML = perrosHumedos[index - 3].weight;
-		humedosWeight2.innerHTML = perrosHumedos[index - 2].weight;
-		humedosWeight3.innerHTML = perrosHumedos[index - 1].weight;
-		humedosWeight4.innerHTML = perrosHumedos[index].weight;
+		humedosImg1.src = perrosHumedos[index - 4].img;
+		humedosImg2.src = perrosHumedos[index - 3].img;
+		humedosImg3.src = perrosHumedos[index - 2].img;
+		humedosImg4.src = perrosHumedos[index - 1].img;
+		humedosBrand1.innerHTML = perrosHumedos[index - 4].brand;
+		humedosBrand2.innerHTML = perrosHumedos[index - 3].brand;
+		humedosBrand3.innerHTML = perrosHumedos[index - 2].brand;
+		humedosBrand4.innerHTML = perrosHumedos[index - 1].brand;
+		humedosName1.innerHTML = perrosHumedos[index - 4].name;
+		humedosName2.innerHTML = perrosHumedos[index - 3].name;
+		humedosName3.innerHTML = perrosHumedos[index - 2].name;
+		humedosName4.innerHTML = perrosHumedos[index - 1].name;
+		humedosWeight1.innerHTML = perrosHumedos[index - 4].weight;
+		humedosWeight2.innerHTML = perrosHumedos[index - 3].weight;
+		humedosWeight3.innerHTML = perrosHumedos[index - 2].weight;
+		humedosWeight4.innerHTML = perrosHumedos[index - 1].weight;
 	}
-	const img1 = document.getElementById("humedosImg1");
-	const img2 = document.getElementById("humedosImg2");
-	const img3 = document.getElementById("humedosImg3");
-	const img4 = document.getElementById("humedosImg4");
-	const brand1 = document.getElementById("humedosBrand1");
-	const brand2 = document.getElementById("humedosBrand2");
-	const brand3 = document.getElementById("humedosBrand3");
-	const brand4 = document.getElementById("humedosBrand4");
+	const humedosImg1 = document.getElementById("humedosImg1");
+	const humedosImg2 = document.getElementById("humedosImg2");
+	const humedosImg3 = document.getElementById("humedosImg3");
+	const humedosImg4 = document.getElementById("humedosImg4");
+	const humedosBrand1 = document.getElementById("humedosBrand1");
+	const humedosBrand2 = document.getElementById("humedosBrand2");
+	const humedosBrand3 = document.getElementById("humedosBrand3");
+	const humedosBrand4 = document.getElementById("humedosBrand4");
 	const humedosName1 = document.getElementById("humedosName1");
 	const humedosName2 = document.getElementById("humedosName2");
 	const humedosName3 = document.getElementById("humedosName3");
@@ -127,14 +127,14 @@ window.onload = function productosPerrosHumedos() {
 	const humedosWeight4 = document.getElementById("humedosWeight4");
 	const humedosRightButton = document.getElementById("humedosRightButton");
 	const humedosLeftButton = document.getElementById("humedosLeftButton");
-	img1.src = perrosHumedos[0].img;
-	img2.src = perrosHumedos[1].img;
-	img3.src = perrosHumedos[2].img;
-	img4.src = perrosHumedos[3].img;
-	brand1.innerHTML = perrosHumedos[0].brand;
-	brand2.innerHTML = perrosHumedos[1].brand;
-	brand3.innerHTML = perrosHumedos[2].brand;
-	brand4.innerHTML = perrosHumedos[3].brand;
+	humedosImg1.src = perrosHumedos[0].img;
+	humedosImg2.src = perrosHumedos[1].img;
+	humedosImg3.src = perrosHumedos[2].img;
+	humedosImg4.src = perrosHumedos[3].img;
+	humedosBrand1.innerHTML = perrosHumedos[0].brand;
+	humedosBrand2.innerHTML = perrosHumedos[1].brand;
+	humedosBrand3.innerHTML = perrosHumedos[2].brand;
+	humedosBrand4.innerHTML = perrosHumedos[3].brand;
 	humedosName1.innerHTML = perrosHumedos[0].name;
 	humedosName2.innerHTML = perrosHumedos[1].name;
 	humedosName3.innerHTML = perrosHumedos[2].name;
@@ -146,24 +146,97 @@ window.onload = function productosPerrosHumedos() {
 	humedosRightButton.addEventListener("click", moveRight);
 	humedosLeftButton.addEventListener("click", moveLeft);
 	let current = 0;
-
+	console.log(perrosHumedos.length);
 	function moveRight() {
-		if (current + 3 < perrosHumedos.length) {
-			current += 1;
+		if (current >= 0 && current <= perrosHumedos.length - 8) {
+			current += 4;
 			increaseProducts(current);
-		} else {
-			current = 0;
-			increaseProducts(current);
+		} else if (
+			current > perrosHumedos.length - 8 &&
+			current < perrosHumedos.length - 4
+		) {
+			humedosImg1.src = perrosHumedos[perrosHumedos.length - 4].img;
+			humedosBrand1.innerHTML =
+				perrosHumedos[perrosHumedos.length - 4].brand;
+			humedosName1.innerHTML =
+				perrosHumedos[perrosHumedos.length - 4].name;
+			humedosWeight1.innerHTML =
+				perrosHumedos[perrosHumedos.length - 4].weight;
+			humedosImg2.src = perrosHumedos[perrosHumedos.length - 3].img;
+			humedosBrand2.innerHTML =
+				perrosHumedos[perrosHumedos.length - 3].brand;
+			humedosName2.innerHTML =
+				perrosHumedos[perrosHumedos.length - 3].name;
+			humedosWeight2.innerHTML =
+				perrosHumedos[perrosHumedos.length - 3].weight;
+			humedosImg3.src = perrosHumedos[perrosHumedos.length - 2].img;
+			humedosBrand3.innerHTML =
+				perrosHumedos[perrosHumedos.length - 2].brand;
+			humedosName3.innerHTML =
+				perrosHumedos[perrosHumedos.length - 2].name;
+			humedosWeight3.innerHTML =
+				perrosHumedos[perrosHumedos.length - 2].weight;
+			humedosImg4.src = perrosHumedos[perrosHumedos.length - 1].img;
+			humedosBrand4.innerHTML =
+				perrosHumedos[perrosHumedos.length - 1].brand;
+			humedosName4.innerHTML =
+				perrosHumedos[perrosHumedos.length - 1].name;
+			humedosWeight4.innerHTML =
+				perrosHumedos[perrosHumedos.length - 1].weight;
+			current += 4;
+		} else if (current >= 4 && perrosHumedos.length < 8) {
+			humedosImg1.src = perrosHumedos[perrosHumedos.length - 4].img;
+			humedosBrand1.innerHTML =
+				perrosHumedos[perrosHumedos.length - 4].brand;
+			humedosName1.innerHTML =
+				perrosHumedos[perrosHumedos.length - 4].name;
+			humedosWeight1.innerHTML =
+				perrosHumedos[perrosHumedos.length - 4].weight;
+			humedosImg2.src = perrosHumedos[perrosHumedos.length - 3].img;
+			humedosBrand2.innerHTML =
+				perrosHumedos[perrosHumedos.length - 3].brand;
+			humedosName2.innerHTML =
+				perrosHumedos[perrosHumedos.length - 3].name;
+			humedosWeight2.innerHTML =
+				perrosHumedos[perrosHumedos.length - 3].weight;
+			humedosImg3.src = perrosHumedos[perrosHumedos.length - 2].img;
+			humedosBrand3.innerHTML =
+				perrosHumedos[perrosHumedos.length - 2].brand;
+			humedosName3.innerHTML =
+				perrosHumedos[perrosHumedos.length - 2].name;
+			humedosWeight3.innerHTML =
+				perrosHumedos[perrosHumedos.length - 2].weight;
+			humedosImg4.src = perrosHumedos[perrosHumedos.length - 1].img;
+			humedosBrand4.innerHTML =
+				perrosHumedos[perrosHumedos.length - 1].brand;
+			humedosName4.innerHTML =
+				perrosHumedos[perrosHumedos.length - 1].name;
+			humedosWeight4.innerHTML =
+				perrosHumedos[perrosHumedos.length - 1].weight;
 		}
 	}
 	function moveLeft() {
-		if (current - 3 > 0) {
-			current -= 1;
+		if (current >= 4 && current <= perrosHumedos.length - 1) {
 			decreaseProducts(current);
+			current -= 4;
 		} else {
-			current = perrosHumedos.length;
-			decreaseProducts(current);
+			humedosImg1.src = perrosHumedos[0].img;
+			humedosBrand1.innerHTML = perrosHumedos[0].brand;
+			humedosName1.innerHTML = perrosHumedos[0].name;
+			humedosWeight1.innerHTML = perrosHumedos[0].weight;
+			humedosImg2.src = perrosHumedos[1].img;
+			humedosBrand2.innerHTML = perrosHumedos[1].brand;
+			humedosName2.innerHTML = perrosHumedos[1].name;
+			humedosWeight2.innerHTML = perrosHumedos[1].weight;
+			humedosImg3.src = perrosHumedos[2].img;
+			humedosBrand3.innerHTML = perrosHumedos[2].brand;
+			humedosName3.innerHTML = perrosHumedos[2].name;
+			humedosWeight3.innerHTML = perrosHumedos[2].weight;
+			humedosImg4.src = perrosHumedos[3].img;
+			humedosBrand4.innerHTML = perrosHumedos[3].brand;
+			humedosName4.innerHTML = perrosHumedos[3].name;
+			humedosWeight4.innerHTML = perrosHumedos[3].weight;
 		}
 	}
-};
+}
 productosPerrosHumedos();

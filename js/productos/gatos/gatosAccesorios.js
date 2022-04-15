@@ -50,22 +50,22 @@ function productosGatosAccesorios() {
 		accesoriosWeight4.innerHTML = gatosAccesorios[index + 3].weight;
 	}
 	function decreaseProducts(index) {
-		accesoriosImg1.src = gatosAccesorios[index - 3].img;
-		accesoriosImg2.src = gatosAccesorios[index - 2].img;
-		accesoriosImg3.src = gatosAccesorios[index - 1].img;
-		accesoriosImg4.src = gatosAccesorios[index].img;
-		accesoriosBrand1.innerHTML = gatosAccesorios[index - 3].brand;
-		accesoriosBrand2.innerHTML = gatosAccesorios[index - 2].brand;
-		accesoriosBrand3.innerHTML = gatosAccesorios[index - 1].brand;
-		accesoriosBrand4.innerHTML = gatosAccesorios[index].brand;
-		accesoriosName1.innerHTML = gatosAccesorios[index - 3].name;
-		accesoriosName2.innerHTML = gatosAccesorios[index - 2].name;
-		accesoriosName3.innerHTML = gatosAccesorios[index - 1].name;
-		accesoriosName4.innerHTML = gatosAccesorios[index].name;
-		accesoriosWeight1.innerHTML = gatosAccesorios[index - 3].weight;
-		accesoriosWeight2.innerHTML = gatosAccesorios[index - 2].weight;
-		accesoriosWeight3.innerHTML = gatosAccesorios[index - 1].weight;
-		accesoriosWeight4.innerHTML = gatosAccesorios[index].weight;
+		accesoriosImg1.src = gatosAccesorios[index - 4].img;
+		accesoriosImg2.src = gatosAccesorios[index - 3].img;
+		accesoriosImg3.src = gatosAccesorios[index - 2].img;
+		accesoriosImg4.src = gatosAccesorios[index - 1].img;
+		accesoriosBrand1.innerHTML = gatosAccesorios[index - 4].brand;
+		accesoriosBrand2.innerHTML = gatosAccesorios[index - 3].brand;
+		accesoriosBrand3.innerHTML = gatosAccesorios[index - 2].brand;
+		accesoriosBrand4.innerHTML = gatosAccesorios[index - 1].brand;
+		accesoriosName1.innerHTML = gatosAccesorios[index - 4].name;
+		accesoriosName2.innerHTML = gatosAccesorios[index - 3].name;
+		accesoriosName3.innerHTML = gatosAccesorios[index - 2].name;
+		accesoriosName4.innerHTML = gatosAccesorios[index - 1].name;
+		accesoriosWeight1.innerHTML = gatosAccesorios[index - 4].weight;
+		accesoriosWeight2.innerHTML = gatosAccesorios[index - 3].weight;
+		accesoriosWeight3.innerHTML = gatosAccesorios[index - 2].weight;
+		accesoriosWeight4.innerHTML = gatosAccesorios[index - 1].weight;
 	}
 	const accesoriosImg1 = document.getElementById("accesoriosImg1");
 	const accesoriosImg2 = document.getElementById("accesoriosImg2");
@@ -108,23 +108,104 @@ function productosGatosAccesorios() {
 	accesoriosRightButton.addEventListener("click", moveRight);
 	accesoriosLeftButton.addEventListener("click", moveLeft);
 	let current = 0;
-
+	console.log(gatosAccesorios.length);
 	function moveRight() {
-		if (current + 3 < gatosAccesorios.length) {
-			current += 1;
+		if (current >= 0 && current <= gatosAccesorios.length - 8) {
+			current += 4;
 			increaseProducts(current);
-		} else {
-			current = 0;
-			increaseProducts(current);
+		} else if (
+			current > gatosAccesorios.length - 8 &&
+			current < gatosAccesorios.length - 4
+		) {
+			accesoriosImg1.src =
+				gatosAccesorios[gatosAccesorios.length - 4].img;
+			accesoriosBrand1.innerHTML =
+				gatosAccesorios[gatosAccesorios.length - 4].brand;
+			accesoriosName1.innerHTML =
+				gatosAccesorios[gatosAccesorios.length - 4].name;
+			accesoriosWeight1.innerHTML =
+				gatosAccesorios[gatosAccesorios.length - 4].weight;
+			accesoriosImg2.src =
+				gatosAccesorios[gatosAccesorios.length - 3].img;
+			accesoriosBrand2.innerHTML =
+				gatosAccesorios[gatosAccesorios.length - 3].brand;
+			accesoriosName2.innerHTML =
+				gatosAccesorios[gatosAccesorios.length - 3].name;
+			accesoriosWeight2.innerHTML =
+				gatosAccesorios[gatosAccesorios.length - 3].weight;
+			accesoriosImg3.src =
+				gatosAccesorios[gatosAccesorios.length - 2].img;
+			accesoriosBrand3.innerHTML =
+				gatosAccesorios[gatosAccesorios.length - 2].brand;
+			accesoriosName3.innerHTML =
+				gatosAccesorios[gatosAccesorios.length - 2].name;
+			accesoriosWeight3.innerHTML =
+				gatosAccesorios[gatosAccesorios.length - 2].weight;
+			accesoriosImg4.src =
+				gatosAccesorios[gatosAccesorios.length - 1].img;
+			accesoriosBrand4.innerHTML =
+				gatosAccesorios[gatosAccesorios.length - 1].brand;
+			accesoriosName4.innerHTML =
+				gatosAccesorios[gatosAccesorios.length - 1].name;
+			accesoriosWeight4.innerHTML =
+				gatosAccesorios[gatosAccesorios.length - 1].weight;
+			current += 4;
+		} else if (current >= 4 && gatosAccesorios.length < 8) {
+			accesoriosImg1.src =
+				gatosAccesorios[gatosAccesorios.length - 4].img;
+			accesoriosBrand1.innerHTML =
+				gatosAccesorios[gatosAccesorios.length - 4].brand;
+			accesoriosName1.innerHTML =
+				gatosAccesorios[gatosAccesorios.length - 4].name;
+			accesoriosWeight1.innerHTML =
+				gatosAccesorios[gatosAccesorios.length - 4].weight;
+			accesoriosImg2.src =
+				gatosAccesorios[gatosAccesorios.length - 3].img;
+			accesoriosBrand2.innerHTML =
+				gatosAccesorios[gatosAccesorios.length - 3].brand;
+			accesoriosName2.innerHTML =
+				gatosAccesorios[gatosAccesorios.length - 3].name;
+			accesoriosWeight2.innerHTML =
+				gatosAccesorios[gatosAccesorios.length - 3].weight;
+			accesoriosImg3.src =
+				gatosAccesorios[gatosAccesorios.length - 2].img;
+			accesoriosBrand3.innerHTML =
+				gatosAccesorios[gatosAccesorios.length - 2].brand;
+			accesoriosName3.innerHTML =
+				gatosAccesorios[gatosAccesorios.length - 2].name;
+			accesoriosWeight3.innerHTML =
+				gatosAccesorios[gatosAccesorios.length - 2].weight;
+			accesoriosImg4.src =
+				gatosAccesorios[gatosAccesorios.length - 1].img;
+			accesoriosBrand4.innerHTML =
+				gatosAccesorios[gatosAccesorios.length - 1].brand;
+			accesoriosName4.innerHTML =
+				gatosAccesorios[gatosAccesorios.length - 1].name;
+			accesoriosWeight4.innerHTML =
+				gatosAccesorios[gatosAccesorios.length - 1].weight;
 		}
 	}
 	function moveLeft() {
-		if (current - 3 > 0) {
-			current -= 1;
+		if (current >= 4 && current <= gatosAccesorios.length - 1) {
 			decreaseProducts(current);
+			current -= 4;
 		} else {
-			current = gatosAccesorios.length;
-			decreaseProducts(current);
+			accesoriosImg1.src = gatosAccesorios[0].img;
+			accesoriosBrand1.innerHTML = gatosAccesorios[0].brand;
+			accesoriosName1.innerHTML = gatosAccesorios[0].name;
+			accesoriosWeight1.innerHTML = gatosAccesorios[0].weight;
+			accesoriosImg2.src = gatosAccesorios[1].img;
+			accesoriosBrand2.innerHTML = gatosAccesorios[1].brand;
+			accesoriosName2.innerHTML = gatosAccesorios[1].name;
+			accesoriosWeight2.innerHTML = gatosAccesorios[1].weight;
+			accesoriosImg3.src = gatosAccesorios[2].img;
+			accesoriosBrand3.innerHTML = gatosAccesorios[2].brand;
+			accesoriosName3.innerHTML = gatosAccesorios[2].name;
+			accesoriosWeight3.innerHTML = gatosAccesorios[2].weight;
+			accesoriosImg4.src = gatosAccesorios[3].img;
+			accesoriosBrand4.innerHTML = gatosAccesorios[3].brand;
+			accesoriosName4.innerHTML = gatosAccesorios[3].name;
+			accesoriosWeight4.innerHTML = gatosAccesorios[3].weight;
 		}
 	}
 }

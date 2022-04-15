@@ -104,22 +104,22 @@ function productosPerrosSnaks() {
 		snaksWeight4.innerHTML = perrosSnaks[index + 3].weight;
 	}
 	function decreaseProducts(index) {
-		snaksImg1.src = perrosSnaks[index - 3].img;
-		snaksImg2.src = perrosSnaks[index - 2].img;
-		snaksImg3.src = perrosSnaks[index - 1].img;
-		snaksImg4.src = perrosSnaks[index].img;
-		snaksBrand1.innerHTML = perrosSnaks[index - 3].brand;
-		snaksBrand2.innerHTML = perrosSnaks[index - 2].brand;
-		snaksBrand3.innerHTML = perrosSnaks[index - 1].brand;
-		snaksBrand4.innerHTML = perrosSnaks[index].brand;
-		snaksName1.innerHTML = perrosSnaks[index - 3].name;
-		snaksName2.innerHTML = perrosSnaks[index - 2].name;
-		snaksName3.innerHTML = perrosSnaks[index - 1].name;
-		snaksName4.innerHTML = perrosSnaks[index].name;
-		snaksWeight1.innerHTML = perrosSnaks[index - 3].weight;
-		snaksWeight2.innerHTML = perrosSnaks[index - 2].weight;
-		snaksWeight3.innerHTML = perrosSnaks[index - 1].weight;
-		snaksWeight4.innerHTML = perrosSnaks[index].weight;
+		snaksImg1.src = perrosSnaks[index - 4].img;
+		snaksImg2.src = perrosSnaks[index - 3].img;
+		snaksImg3.src = perrosSnaks[index - 2].img;
+		snaksImg4.src = perrosSnaks[index - 1].img;
+		snaksBrand1.innerHTML = perrosSnaks[index - 4].brand;
+		snaksBrand2.innerHTML = perrosSnaks[index - 3].brand;
+		snaksBrand3.innerHTML = perrosSnaks[index - 2].brand;
+		snaksBrand4.innerHTML = perrosSnaks[index - 1].brand;
+		snaksName1.innerHTML = perrosSnaks[index - 4].name;
+		snaksName2.innerHTML = perrosSnaks[index - 3].name;
+		snaksName3.innerHTML = perrosSnaks[index - 2].name;
+		snaksName4.innerHTML = perrosSnaks[index - 1].name;
+		snaksWeight1.innerHTML = perrosSnaks[index - 4].weight;
+		snaksWeight2.innerHTML = perrosSnaks[index - 3].weight;
+		snaksWeight3.innerHTML = perrosSnaks[index - 2].weight;
+		snaksWeight4.innerHTML = perrosSnaks[index - 1].weight;
 	}
 	const snaksImg1 = document.getElementById("snaksImg1");
 	const snaksImg2 = document.getElementById("snaksImg2");
@@ -158,23 +158,72 @@ function productosPerrosSnaks() {
 	snaksRightButton.addEventListener("click", moveRight);
 	snaksLeftButton.addEventListener("click", moveLeft);
 	let current = 0;
-
+	console.log(perrosSnaks.length);
 	function moveRight() {
-		if (current + 3 < perrosSnaks.length) {
-			current += 1;
+		if (current >= 0 && current <= perrosSnaks.length - 8) {
+			current += 4;
 			increaseProducts(current);
-		} else {
-			current = 0;
-			increaseProducts(current);
+		} else if (
+			current > perrosSnaks.length - 8 &&
+			current < perrosSnaks.length - 4
+		) {
+			snaksImg1.src = perrosSnaks[perrosSnaks.length - 4].img;
+			snaksBrand1.innerHTML = perrosSnaks[perrosSnaks.length - 4].brand;
+			snaksName1.innerHTML = perrosSnaks[perrosSnaks.length - 4].name;
+			snaksWeight1.innerHTML = perrosSnaks[perrosSnaks.length - 4].weight;
+			snaksImg2.src = perrosSnaks[perrosSnaks.length - 3].img;
+			snaksBrand2.innerHTML = perrosSnaks[perrosSnaks.length - 3].brand;
+			snaksName2.innerHTML = perrosSnaks[perrosSnaks.length - 3].name;
+			snaksWeight2.innerHTML = perrosSnaks[perrosSnaks.length - 3].weight;
+			snaksImg3.src = perrosSnaks[perrosSnaks.length - 2].img;
+			snaksBrand3.innerHTML = perrosSnaks[perrosSnaks.length - 2].brand;
+			snaksName3.innerHTML = perrosSnaks[perrosSnaks.length - 2].name;
+			snaksWeight3.innerHTML = perrosSnaks[perrosSnaks.length - 2].weight;
+			snaksImg4.src = perrosSnaks[perrosSnaks.length - 1].img;
+			snaksBrand4.innerHTML = perrosSnaks[perrosSnaks.length - 1].brand;
+			snaksName4.innerHTML = perrosSnaks[perrosSnaks.length - 1].name;
+			snaksWeight4.innerHTML = perrosSnaks[perrosSnaks.length - 1].weight;
+			current += 4;
+		} else if (current >= 4 && perrosSnaks.length < 8) {
+			snaksImg1.src = perrosSnaks[perrosSnaks.length - 4].img;
+			snaksBrand1.innerHTML = perrosSnaks[perrosSnaks.length - 4].brand;
+			snaksName1.innerHTML = perrosSnaks[perrosSnaks.length - 4].name;
+			snaksWeight1.innerHTML = perrosSnaks[perrosSnaks.length - 4].weight;
+			snaksImg2.src = perrosSnaks[perrosSnaks.length - 3].img;
+			snaksBrand2.innerHTML = perrosSnaks[perrosSnaks.length - 3].brand;
+			snaksName2.innerHTML = perrosSnaks[perrosSnaks.length - 3].name;
+			snaksWeight2.innerHTML = perrosSnaks[perrosSnaks.length - 3].weight;
+			snaksImg3.src = perrosSnaks[perrosSnaks.length - 2].img;
+			snaksBrand3.innerHTML = perrosSnaks[perrosSnaks.length - 2].brand;
+			snaksName3.innerHTML = perrosSnaks[perrosSnaks.length - 2].name;
+			snaksWeight3.innerHTML = perrosSnaks[perrosSnaks.length - 2].weight;
+			snaksImg4.src = perrosSnaks[perrosSnaks.length - 1].img;
+			snaksBrand4.innerHTML = perrosSnaks[perrosSnaks.length - 1].brand;
+			snaksName4.innerHTML = perrosSnaks[perrosSnaks.length - 1].name;
+			snaksWeight4.innerHTML = perrosSnaks[perrosSnaks.length - 1].weight;
 		}
 	}
 	function moveLeft() {
-		if (current - 3 > 0) {
-			current -= 1;
+		if (current >= 4 && current <= perrosSnaks.length - 1) {
 			decreaseProducts(current);
+			current -= 4;
 		} else {
-			current = perrosSnaks.length;
-			decreaseProducts(current);
+			snaksImg1.src = perrosSnaks[0].img;
+			snaksBrand1.innerHTML = perrosSnaks[0].brand;
+			snaksName1.innerHTML = perrosSnaks[0].name;
+			snaksWeight1.innerHTML = perrosSnaks[0].weight;
+			snaksImg2.src = perrosSnaks[1].img;
+			snaksBrand2.innerHTML = perrosSnaks[1].brand;
+			snaksName2.innerHTML = perrosSnaks[1].name;
+			snaksWeight2.innerHTML = perrosSnaks[1].weight;
+			snaksImg3.src = perrosSnaks[2].img;
+			snaksBrand3.innerHTML = perrosSnaks[2].brand;
+			snaksName3.innerHTML = perrosSnaks[2].name;
+			snaksWeight3.innerHTML = perrosSnaks[2].weight;
+			snaksImg4.src = perrosSnaks[3].img;
+			snaksBrand4.innerHTML = perrosSnaks[3].brand;
+			snaksName4.innerHTML = perrosSnaks[3].name;
+			snaksWeight4.innerHTML = perrosSnaks[3].weight;
 		}
 	}
 }

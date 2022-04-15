@@ -116,22 +116,22 @@ function productosGatosSecos() {
 		secosWeight4.innerHTML = gatosSecos[index + 3].weight;
 	}
 	function decreaseProducts(index) {
-		secosImg1.src = gatosSecos[index - 3].img;
-		secosImg2.src = gatosSecos[index - 2].img;
-		secosImg3.src = gatosSecos[index - 1].img;
-		secosImg4.src = gatosSecos[index].img;
-		secosBrand1.innerHTML = gatosSecos[index - 3].brand;
-		secosBrand2.innerHTML = gatosSecos[index - 2].brand;
-		secosBrand3.innerHTML = gatosSecos[index - 1].brand;
-		secosBrand4.innerHTML = gatosSecos[index].brand;
-		secosName1.innerHTML = gatosSecos[index - 3].name;
-		secosName2.innerHTML = gatosSecos[index - 2].name;
-		secosName3.innerHTML = gatosSecos[index - 1].name;
-		secosName4.innerHTML = gatosSecos[index].name;
-		secosWeight1.innerHTML = gatosSecos[index - 3].weight;
-		secosWeight2.innerHTML = gatosSecos[index - 2].weight;
-		secosWeight3.innerHTML = gatosSecos[index - 1].weight;
-		secosWeight4.innerHTML = gatosSecos[index].weight;
+		secosImg1.src = gatosSecos[index - 4].img;
+		secosImg2.src = gatosSecos[index - 3].img;
+		secosImg3.src = gatosSecos[index - 2].img;
+		secosImg4.src = gatosSecos[index - 1].img;
+		secosBrand1.innerHTML = gatosSecos[index - 4].brand;
+		secosBrand2.innerHTML = gatosSecos[index - 3].brand;
+		secosBrand3.innerHTML = gatosSecos[index - 2].brand;
+		secosBrand4.innerHTML = gatosSecos[index - 1].brand;
+		secosName1.innerHTML = gatosSecos[index - 4].name;
+		secosName2.innerHTML = gatosSecos[index - 3].name;
+		secosName3.innerHTML = gatosSecos[index - 2].name;
+		secosName4.innerHTML = gatosSecos[index - 1].name;
+		secosWeight1.innerHTML = gatosSecos[index - 4].weight;
+		secosWeight2.innerHTML = gatosSecos[index - 3].weight;
+		secosWeight3.innerHTML = gatosSecos[index - 2].weight;
+		secosWeight4.innerHTML = gatosSecos[index - 1].weight;
 	}
 	const secosImg1 = document.getElementById("secosImg1");
 	const secosImg2 = document.getElementById("secosImg2");
@@ -170,23 +170,72 @@ function productosGatosSecos() {
 	secosRightButton.addEventListener("click", moveRight);
 	secosLeftButton.addEventListener("click", moveLeft);
 	let current = 0;
-
+	console.log(gatosSecos.length);
 	function moveRight() {
-		if (current + 3 < gatosSecos.length) {
-			current += 1;
+		if (current >= 0 && current <= gatosSecos.length - 8) {
+			current += 4;
 			increaseProducts(current);
-		} else {
-			current = 0;
-			increaseProducts(current);
+		} else if (
+			current > gatosSecos.length - 8 &&
+			current < gatosSecos.length - 4
+		) {
+			secosImg1.src = gatosSecos[gatosSecos.length - 4].img;
+			secosBrand1.innerHTML = gatosSecos[gatosSecos.length - 4].brand;
+			secosName1.innerHTML = gatosSecos[gatosSecos.length - 4].name;
+			secosWeight1.innerHTML = gatosSecos[gatosSecos.length - 4].weight;
+			secosImg2.src = gatosSecos[gatosSecos.length - 3].img;
+			secosBrand2.innerHTML = gatosSecos[gatosSecos.length - 3].brand;
+			secosName2.innerHTML = gatosSecos[gatosSecos.length - 3].name;
+			secosWeight2.innerHTML = gatosSecos[gatosSecos.length - 3].weight;
+			secosImg3.src = gatosSecos[gatosSecos.length - 2].img;
+			secosBrand3.innerHTML = gatosSecos[gatosSecos.length - 2].brand;
+			secosName3.innerHTML = gatosSecos[gatosSecos.length - 2].name;
+			secosWeight3.innerHTML = gatosSecos[gatosSecos.length - 2].weight;
+			secosImg4.src = gatosSecos[gatosSecos.length - 1].img;
+			secosBrand4.innerHTML = gatosSecos[gatosSecos.length - 1].brand;
+			secosName4.innerHTML = gatosSecos[gatosSecos.length - 1].name;
+			secosWeight4.innerHTML = gatosSecos[gatosSecos.length - 1].weight;
+			current += 4;
+		} else if (current >= 4 && gatosSecos.length < 8) {
+			secosImg1.src = gatosSecos[gatosSecos.length - 4].img;
+			secosBrand1.innerHTML = gatosSecos[gatosSecos.length - 4].brand;
+			secosName1.innerHTML = gatosSecos[gatosSecos.length - 4].name;
+			secosWeight1.innerHTML = gatosSecos[gatosSecos.length - 4].weight;
+			secosImg2.src = gatosSecos[gatosSecos.length - 3].img;
+			secosBrand2.innerHTML = gatosSecos[gatosSecos.length - 3].brand;
+			secosName2.innerHTML = gatosSecos[gatosSecos.length - 3].name;
+			secosWeight2.innerHTML = gatosSecos[gatosSecos.length - 3].weight;
+			secosImg3.src = gatosSecos[gatosSecos.length - 2].img;
+			secosBrand3.innerHTML = gatosSecos[gatosSecos.length - 2].brand;
+			secosName3.innerHTML = gatosSecos[gatosSecos.length - 2].name;
+			secosWeight3.innerHTML = gatosSecos[gatosSecos.length - 2].weight;
+			secosImg4.src = gatosSecos[gatosSecos.length - 1].img;
+			secosBrand4.innerHTML = gatosSecos[gatosSecos.length - 1].brand;
+			secosName4.innerHTML = gatosSecos[gatosSecos.length - 1].name;
+			secosWeight4.innerHTML = gatosSecos[gatosSecos.length - 1].weight;
 		}
 	}
 	function moveLeft() {
-		if (current - 3 > 0) {
-			current -= 1;
+		if (current >= 4 && current <= gatosSecos.length - 1) {
 			decreaseProducts(current);
+			current -= 4;
 		} else {
-			current = gatosSecos.length;
-			decreaseProducts(current);
+			secosImg1.src = gatosSecos[0].img;
+			secosBrand1.innerHTML = gatosSecos[0].brand;
+			secosName1.innerHTML = gatosSecos[0].name;
+			secosWeight1.innerHTML = gatosSecos[0].weight;
+			secosImg2.src = gatosSecos[1].img;
+			secosBrand2.innerHTML = gatosSecos[1].brand;
+			secosName2.innerHTML = gatosSecos[1].name;
+			secosWeight2.innerHTML = gatosSecos[1].weight;
+			secosImg3.src = gatosSecos[2].img;
+			secosBrand3.innerHTML = gatosSecos[2].brand;
+			secosName3.innerHTML = gatosSecos[2].name;
+			secosWeight3.innerHTML = gatosSecos[2].weight;
+			secosImg4.src = gatosSecos[3].img;
+			secosBrand4.innerHTML = gatosSecos[3].brand;
+			secosName4.innerHTML = gatosSecos[3].name;
+			secosWeight4.innerHTML = gatosSecos[3].weight;
 		}
 	}
 }

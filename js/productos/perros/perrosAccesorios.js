@@ -84,12 +84,6 @@ function productosPerrosAccesorios() {
 			brand: "Varias Marcas",
 			weight: "",
 		},
-		{
-			img: "img/productos/perros/accesorios/Imagen119.jpg",
-			name: "Hueso Algodon 2 Nudos",
-			brand: "Varias Marcas",
-			weight: "",
-		},
 	];
 	function increaseProducts(index) {
 		accesoriosImg1.src = perrosAccesorios[index].img;
@@ -110,22 +104,22 @@ function productosPerrosAccesorios() {
 		accesoriosWeight4.innerHTML = perrosAccesorios[index + 3].weight;
 	}
 	function decreaseProducts(index) {
-		accesoriosImg1.src = perrosAccesorios[index - 3].img;
-		accesoriosImg2.src = perrosAccesorios[index - 2].img;
-		accesoriosImg3.src = perrosAccesorios[index - 1].img;
-		accesoriosImg4.src = perrosAccesorios[index].img;
-		accesoriosBrand1.innerHTML = perrosAccesorios[index - 3].brand;
-		accesoriosBrand2.innerHTML = perrosAccesorios[index - 2].brand;
-		accesoriosBrand3.innerHTML = perrosAccesorios[index - 1].brand;
-		accesoriosBrand4.innerHTML = perrosAccesorios[index].brand;
-		accesoriosName1.innerHTML = perrosAccesorios[index - 3].name;
-		accesoriosName2.innerHTML = perrosAccesorios[index - 2].name;
-		accesoriosName3.innerHTML = perrosAccesorios[index - 1].name;
-		accesoriosName4.innerHTML = perrosAccesorios[index].name;
-		accesoriosWeight1.innerHTML = perrosAccesorios[index - 3].weight;
-		accesoriosWeight2.innerHTML = perrosAccesorios[index - 2].weight;
-		accesoriosWeight3.innerHTML = perrosAccesorios[index - 1].weight;
-		accesoriosWeight4.innerHTML = perrosAccesorios[index].weight;
+		accesoriosImg1.src = perrosAccesorios[index - 4].img;
+		accesoriosImg2.src = perrosAccesorios[index - 3].img;
+		accesoriosImg3.src = perrosAccesorios[index - 2].img;
+		accesoriosImg4.src = perrosAccesorios[index - 1].img;
+		accesoriosBrand1.innerHTML = perrosAccesorios[index - 4].brand;
+		accesoriosBrand2.innerHTML = perrosAccesorios[index - 3].brand;
+		accesoriosBrand3.innerHTML = perrosAccesorios[index - 2].brand;
+		accesoriosBrand4.innerHTML = perrosAccesorios[index - 1].brand;
+		accesoriosName1.innerHTML = perrosAccesorios[index - 4].name;
+		accesoriosName2.innerHTML = perrosAccesorios[index - 3].name;
+		accesoriosName3.innerHTML = perrosAccesorios[index - 2].name;
+		accesoriosName4.innerHTML = perrosAccesorios[index - 1].name;
+		accesoriosWeight1.innerHTML = perrosAccesorios[index - 4].weight;
+		accesoriosWeight2.innerHTML = perrosAccesorios[index - 3].weight;
+		accesoriosWeight3.innerHTML = perrosAccesorios[index - 2].weight;
+		accesoriosWeight4.innerHTML = perrosAccesorios[index - 1].weight;
 	}
 	const accesoriosImg1 = document.getElementById("accesoriosImg1");
 	const accesoriosImg2 = document.getElementById("accesoriosImg2");
@@ -168,23 +162,104 @@ function productosPerrosAccesorios() {
 	accesoriosRightButton.addEventListener("click", moveRight);
 	accesoriosLeftButton.addEventListener("click", moveLeft);
 	let current = 0;
-
+	console.log(perrosAccesorios.length);
 	function moveRight() {
-		if (current + 3 < perrosAccesorios.length) {
-			current += 1;
+		if (current >= 0 && current <= perrosAccesorios.length - 8) {
+			current += 4;
 			increaseProducts(current);
-		} else {
-			current = 0;
-			increaseProducts(current);
+		} else if (
+			current > perrosAccesorios.length - 8 &&
+			current < perrosAccesorios.length - 4
+		) {
+			accesoriosImg1.src =
+				perrosAccesorios[perrosAccesorios.length - 4].img;
+			accesoriosBrand1.innerHTML =
+				perrosAccesorios[perrosAccesorios.length - 4].brand;
+			accesoriosName1.innerHTML =
+				perrosAccesorios[perrosAccesorios.length - 4].name;
+			accesoriosWeight1.innerHTML =
+				perrosAccesorios[perrosAccesorios.length - 4].weight;
+			accesoriosImg2.src =
+				perrosAccesorios[perrosAccesorios.length - 3].img;
+			accesoriosBrand2.innerHTML =
+				perrosAccesorios[perrosAccesorios.length - 3].brand;
+			accesoriosName2.innerHTML =
+				perrosAccesorios[perrosAccesorios.length - 3].name;
+			accesoriosWeight2.innerHTML =
+				perrosAccesorios[perrosAccesorios.length - 3].weight;
+			accesoriosImg3.src =
+				perrosAccesorios[perrosAccesorios.length - 2].img;
+			accesoriosBrand3.innerHTML =
+				perrosAccesorios[perrosAccesorios.length - 2].brand;
+			accesoriosName3.innerHTML =
+				perrosAccesorios[perrosAccesorios.length - 2].name;
+			accesoriosWeight3.innerHTML =
+				perrosAccesorios[perrosAccesorios.length - 2].weight;
+			accesoriosImg4.src =
+				perrosAccesorios[perrosAccesorios.length - 1].img;
+			accesoriosBrand4.innerHTML =
+				perrosAccesorios[perrosAccesorios.length - 1].brand;
+			accesoriosName4.innerHTML =
+				perrosAccesorios[perrosAccesorios.length - 1].name;
+			accesoriosWeight4.innerHTML =
+				perrosAccesorios[perrosAccesorios.length - 1].weight;
+			current += 4;
+		} else if (current >= 4 && perrosAccesorios.length < 8) {
+			accesoriosImg1.src =
+				perrosAccesorios[perrosAccesorios.length - 4].img;
+			accesoriosBrand1.innerHTML =
+				perrosAccesorios[perrosAccesorios.length - 4].brand;
+			accesoriosName1.innerHTML =
+				perrosAccesorios[perrosAccesorios.length - 4].name;
+			accesoriosWeight1.innerHTML =
+				perrosAccesorios[perrosAccesorios.length - 4].weight;
+			accesoriosImg2.src =
+				perrosAccesorios[perrosAccesorios.length - 3].img;
+			accesoriosBrand2.innerHTML =
+				perrosAccesorios[perrosAccesorios.length - 3].brand;
+			accesoriosName2.innerHTML =
+				perrosAccesorios[perrosAccesorios.length - 3].name;
+			accesoriosWeight2.innerHTML =
+				perrosAccesorios[perrosAccesorios.length - 3].weight;
+			accesoriosImg3.src =
+				perrosAccesorios[perrosAccesorios.length - 2].img;
+			accesoriosBrand3.innerHTML =
+				perrosAccesorios[perrosAccesorios.length - 2].brand;
+			accesoriosName3.innerHTML =
+				perrosAccesorios[perrosAccesorios.length - 2].name;
+			accesoriosWeight3.innerHTML =
+				perrosAccesorios[perrosAccesorios.length - 2].weight;
+			accesoriosImg4.src =
+				perrosAccesorios[perrosAccesorios.length - 1].img;
+			accesoriosBrand4.innerHTML =
+				perrosAccesorios[perrosAccesorios.length - 1].brand;
+			accesoriosName4.innerHTML =
+				perrosAccesorios[perrosAccesorios.length - 1].name;
+			accesoriosWeight4.innerHTML =
+				perrosAccesorios[perrosAccesorios.length - 1].weight;
 		}
 	}
 	function moveLeft() {
-		if (current - 3 > 0) {
-			current -= 1;
+		if (current >= 4 && current <= perrosAccesorios.length - 1) {
 			decreaseProducts(current);
+			current -= 4;
 		} else {
-			current = perrosAccesorios.length;
-			decreaseProducts(current);
+			accesoriosImg1.src = perrosAccesorios[0].img;
+			accesoriosBrand1.innerHTML = perrosAccesorios[0].brand;
+			accesoriosName1.innerHTML = perrosAccesorios[0].name;
+			accesoriosWeight1.innerHTML = perrosAccesorios[0].weight;
+			accesoriosImg2.src = perrosAccesorios[1].img;
+			accesoriosBrand2.innerHTML = perrosAccesorios[1].brand;
+			accesoriosName2.innerHTML = perrosAccesorios[1].name;
+			accesoriosWeight2.innerHTML = perrosAccesorios[1].weight;
+			accesoriosImg3.src = perrosAccesorios[2].img;
+			accesoriosBrand3.innerHTML = perrosAccesorios[2].brand;
+			accesoriosName3.innerHTML = perrosAccesorios[2].name;
+			accesoriosWeight3.innerHTML = perrosAccesorios[2].weight;
+			accesoriosImg4.src = perrosAccesorios[3].img;
+			accesoriosBrand4.innerHTML = perrosAccesorios[3].brand;
+			accesoriosName4.innerHTML = perrosAccesorios[3].name;
+			accesoriosWeight4.innerHTML = perrosAccesorios[3].weight;
 		}
 	}
 }
