@@ -1,7 +1,28 @@
+* {
+	margin-right: 0px !important;
+	margin-left: 0px !important;
+	padding-right: 0px !important;
+	padding-left: 0px !important;
+}
 body {
 	font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
-
+.navbar-brand {
+	width: 200px !important;
+	height: 77px !important;
+	margin-left: 150px !important;
+}
+.navbar-brand img {
+	width: 200px !important;
+	height: 77px !important;
+}
+.navBarInfo {
+	margin-right: 140px !important;
+}
+.rosa#marcas {
+	padding-top: 50px !important;
+	padding-bottom: 50px !important;
+}
 .marginFix .hidden {
 	display: none;
 }
@@ -25,7 +46,6 @@ a,
 
 p.dir {
 	text-align: right;
-	padding-right: 15px;
 }
 
 a.menu {
@@ -46,8 +66,8 @@ div#imgnav {
 }
 
 div#cards {
-	padding-left: 5%;
-	padding-right: 5%;
+	padding-left: 5% !important;
+	padding-right: 5% !important;
 	padding-top: 80px;
 }
 
@@ -61,7 +81,18 @@ div#card {
 }
 
 div.card {
+	margin-left: 20px !important;
+	margin-right: 20px !important;
 	border: none;
+	border-radius: 30px;
+}
+
+.brands img {
+	border-style: 30px;
+	border: none;
+	margin-top: 20px;
+	margin-bottom: 20px;
+	border-radius: 30px;
 }
 
 p#card {
@@ -69,13 +100,13 @@ p#card {
 	font-weight: bold;
 	font-size: 18px;
 	font-style: italic;
-	margin: 0 auto;
+	margin: 0 auto !important;
 }
 
 div.rosa {
 	background-color: #fff0f0;
 	margin-top: 50px;
-	padding: 0;
+	padding: 0 !important;
 }
 
 h1 {
@@ -91,7 +122,7 @@ h2 {
 
 div.blanco {
 	margin-top: 50px;
-	padding: 0 15px;
+	padding: 0 15px !important;
 }
 
 p#nosotros {
@@ -109,7 +140,7 @@ iframe {
 }
 
 div#hr {
-	padding: 15px;
+	padding: 15px !important;
 }
 
 div#local {
@@ -138,8 +169,8 @@ div.seccion {
 }
 
 #footer {
-	margin-left: auto;
-	margin-right: auto;
+	margin-left: auto !important;
+	margin-right: auto !important;
 	display: block;
 }
 
@@ -196,7 +227,7 @@ div.seccion {
 	p#nosotros {
 		width: 70%;
 		float: right;
-		padding-left: 10px;
+		padding-left: 10px !important;
 		padding-top: 30px;
 	}
 

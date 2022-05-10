@@ -51,7 +51,7 @@ function productosPerrosAccesorios() {
 		{
 			img: "img/productos/perros/accesorios/Imagen114.jpg",
 			name: "Campera",
-			brand: "",
+			brand: "Varias Marcas",
 			weight: "",
 		},
 		{

@@ -32,7 +32,7 @@
 					</div>
 					<div class="col-sm-8">
 						<div class="dir">
-							<p class="dir">
+							<p class="dir navBarInfo">
 								<svg
 									xmlns="http://www.w3.org/2000/svg"
 									x="0px"
@@ -249,77 +249,121 @@
 		</div>
 
 		<!-- Cards -->
-		<div>
-			<div class="row justify-content-start align-items-center">
-				<div class="col-auto">
-					<h1>Alimentos</h1>
+		<div class="cards">
+			<div class="whiteBackground">
+				<div
+					class="row justify-content-between align-items-center cardsHeaders"
+				>
+					<div class="col-auto">
+						<h1>Alimentos</h1>
+					</div>
+					<div class="col-auto">
+						<button id="alimentosLeftButton" class="buttons">
+							<img
+								src="img/leftButton.PNG"
+								alt="Boton Izquierdo"
+							/>
+						</button>
+						<button id="alimentosRightButton" class="buttons">
+							<img
+								src="img/rightButton.PNG"
+								alt="Boton Derecho"
+							/>
+						</button>
+					</div>
+				</div>
+				<div class="row justify-content-center align-items-center">
+					<div class="col-auto productImg">
+						<img
+							id="alimentosImg1"
+							class="mx-auto d-block"
+							src=""
+							alt="producto1"
+						/>
+						<p id="alimentosBrand1"></p>
+						<p id="alimentosName1"></p>
+						<p id="alimentosWeight1"></p>
+					</div>
+					<div class="col-auto productImg">
+						<img
+							id="alimentosImg2"
+							class="mx-auto d-block"
+							src=""
+							alt="producto2"
+						/>
+						<p id="alimentosBrand2"></p>
+						<p id="alimentosName2"></p>
+						<p id="alimentosWeight2"></p>
+					</div>
 				</div>
 			</div>
-			<div class="row justify-content-end align-items-center">
-				<div class="col-auto marginRightButton">
-					<button id="alimentosLeftButton" class="buttons">
-						<img src="img/leftButton.PNG" alt="Boton Izquierdo" />
-					</button>
-					<button id="alimentosRightButton" class="buttons">
-						<img src="img/rightButton.PNG" alt="Boton Derecho" />
-					</button>
+			<div class="pinkBackground">
+				<div
+					class="row justify-content-between align-items-center cardsHeaders"
+				>
+					<div class="col-auto">
+						<h1>Accesorios</h1>
+					</div>
+					<div class="col-auto">
+						<button id="accesoriosLeftButton" class="buttons">
+							<img
+								src="img/leftButton.PNG"
+								alt="Boton Izquierdo"
+							/>
+						</button>
+						<button id="accesoriosRightButton" class="buttons">
+							<img
+								src="img/rightButton.PNG"
+								alt="Boton Derecho"
+							/>
+						</button>
+					</div>
 				</div>
-			</div>
-			<div class="row justify-content-center align-items-center">
-				<div class="col-auto productImg">
-					<img id="alimentosImg1" src="" alt="producto1" />
-					<p id="alimentosBrand1"></p>
-					<p id="alimentosName1"></p>
-					<p id="alimentosWeight1"></p>
-				</div>
-				<div class="col-auto productImg">
-					<img id="alimentosImg2" src="" alt="producto2" />
-					<p id="alimentosBrand2"></p>
-					<p id="alimentosName2"></p>
-					<p id="alimentosWeight2"></p>
-				</div>
-			</div>
-		</div>
-		<div>
-			<div class="row justify-content-start align-items-center">
-				<div class="col-auto">
-					<h1>Accesorios</h1>
-				</div>
-			</div>
-			<div class="row justify-content-end align-items-center">
-				<div class="col-auto marginRightButton">
-					<button id="accesoriosLeftButton" class="buttons">
-						<img src="img/leftButton.PNG" alt="Boton Izquierdo" />
-					</button>
-					<button id="accesoriosRightButton" class="buttons">
-						<img src="img/rightButton.PNG" alt="Boton Derecho" />
-					</button>
-				</div>
-			</div>
-			<div class="row justify-content-center align-items-center">
-				<div class="col-auto productImg">
-					<img id="accesoriosImg1" src="" alt="producto1" />
-					<p id="accesoriosBrand1"></p>
-					<p id="accesoriosName1"></p>
-					<p id="accesoriosWeight1"></p>
-				</div>
-				<div class="col-auto productImg">
-					<img id="accesoriosImg2" src="" alt="producto2" />
-					<p id="accesoriosBrand2"></p>
-					<p id="accesoriosName2"></p>
-					<p id="accesoriosWeight2"></p>
-				</div>
-				<div class="col-auto productImg">
-					<img id="accesoriosImg3" src="" alt="producto3" />
-					<p id="accesoriosBrand3"></p>
-					<p id="accesoriosName3"></p>
-					<p id="accesoriosWeight3"></p>
-				</div>
-				<div class="col-auto productImg">
-					<img id="accesoriosImg4" src="" alt="producto4" />
-					<p id="accesoriosBrand4"></p>
-					<p id="accesoriosName4"></p>
-					<p id="accesoriosWeight4"></p>
+				<div class="row justify-content-center align-items-center">
+					<div class="col-auto productImg">
+						<img
+							id="accesoriosImg1"
+							class="mx-auto d-block"
+							src=""
+							alt="producto1"
+						/>
+						<p id="accesoriosBrand1"></p>
+						<p id="accesoriosName1"></p>
+						<p id="accesoriosWeight1"></p>
+					</div>
+					<div class="col-auto productImg">
+						<img
+							id="accesoriosImg2"
+							class="mx-auto d-block"
+							src=""
+							alt="producto2"
+						/>
+						<p id="accesoriosBrand2"></p>
+						<p id="accesoriosName2"></p>
+						<p id="accesoriosWeight2"></p>
+					</div>
+					<div class="col-auto productImg">
+						<img
+							id="accesoriosImg3"
+							class="mx-auto d-block"
+							src=""
+							alt="producto3"
+						/>
+						<p id="accesoriosBrand3"></p>
+						<p id="accesoriosName3"></p>
+						<p id="accesoriosWeight3"></p>
+					</div>
+					<div class="col-auto productImg">
+						<img
+							id="accesoriosImg4"
+							class="mx-auto d-block"
+							src=""
+							alt="producto4"
+						/>
+						<p id="accesoriosBrand4"></p>
+						<p id="accesoriosName4"></p>
+						<p id="accesoriosWeight4"></p>
+					</div>
 				</div>
 			</div>
 		</div>
