@@ -101,11 +101,15 @@ div.seccion {
 
 p.info {
 	text-align: justify;
-	padding-top: 10px;
+	padding-top: 10px !important;
+	margin-left: 20px !important;
+	margin-right: 20px !important;
 }
 
 img.info {
-	width: 100%;
+	width: 97%;
+	margin-top: 20px;
+	margin-left: 1.5% !important;
 }
 
 div#cards {

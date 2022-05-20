@@ -82,8 +82,8 @@ div#card {
 }
 
 div.card {
-	margin-left: 20px !important;
-	margin-right: 20px !important;
+	margin-left: 10px !important;
+	margin-right: 10px !important;
 	border: none;
 	border-radius: 30px;
 	justify-content: center !important;
@@ -92,12 +92,12 @@ div.card {
 .brands img {
 	border: none;
 	border-radius: 30px;
-	width: 300px;
-	height: 300px;
+	width: 150px;
+	height: 150px;
 }
 .brands {
-	width: 300px;
-	height: 300px;
+	width: 150px;
+	height: 150px;
 }
 
 p#card {
@@ -288,5 +288,19 @@ div.seccion {
 		width: 26.5vw;
 		border: solid;
 		font-size: 32px;
+	}
+
+	div.card {
+		margin-left: 20px !important;
+		margin-right: 20px !important;
+	}
+
+	.brands img {
+		width: 300px;
+		height: 300px;
+	}
+	.brands {
+		width: 300px;
+		height: 300px;
 	}
 }
