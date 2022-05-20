@@ -34,22 +34,16 @@ a.menu {
 .navbar-brand {
 	width: 200px !important;
 	height: 77px !important;
-	margin-left: 150px !important;
 }
 .navbar-brand img {
 	width: 200px !important;
 	height: 77px !important;
 }
-.navBarInfo {
-	margin-right: 140px !important;
-}
-
 div#imgnav {
 	background-image: url("/img/nav.png");
 	background-repeat: no-repeat;
 	background-position: center;
 }
-
 div.rosa {
 	background-color: #fff0f0;
 	margin-top: 50px;

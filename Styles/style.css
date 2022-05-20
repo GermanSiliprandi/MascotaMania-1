@@ -10,14 +10,10 @@ body {
 .navbar-brand {
 	width: 200px !important;
 	height: 77px !important;
-	margin-left: 150px !important;
 }
 .navbar-brand img {
 	width: 200px !important;
 	height: 77px !important;
-}
-.navBarInfo {
-	margin-right: 140px !important;
 }
 .rosa#marcas {
 	padding-top: 50px !important;
@@ -29,6 +25,11 @@ body {
 
 html {
 	scroll-behavior: smooth;
+}
+
+#mapa {
+	margin-top: 17px;
+	width: 90%;
 }
 
 [id] {
@@ -185,7 +186,7 @@ div.seccion {
 	font-size: small;
 }
 #contactoIndex h1 {
-	font-size: 60px;
+	font-size: 40px;
 	font-style: italic;
 	font-weight: bold;
 }
@@ -196,7 +197,7 @@ div.seccion {
 }
 
 #my-form label {
-	font-size: 32px;
+	font-size: 20px;
 }
 #my-form textarea {
 	height: 200px;
@@ -233,8 +234,8 @@ div.seccion {
 
 	div#mapa {
 		width: 50%;
-		float: left;
-		justify-content: center;
+		border: none;
+		padding: 0 15px !important;
 	}
 
 	div#datos {
@@ -260,5 +261,28 @@ div.seccion {
 
 	div.logo {
 		float: left;
+	}
+	#contactoIndex h1 {
+		font-size: 60px;
+		font-style: italic;
+		font-weight: bold;
+	}
+
+	#my-form label {
+		font-size: 32px;
+	}
+	#my-form textarea {
+		height: 200px;
+		width: 92.5vw;
+		border-radius: 6px;
+		resize: none;
+	}
+	#my-form-button {
+		background-color: #f61919;
+		color: white;
+		height: 70px;
+		width: 26.5vw;
+		border: solid;
+		font-size: 32px;
 	}
 }
