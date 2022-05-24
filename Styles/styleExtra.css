@@ -105,6 +105,9 @@ p.info {
 	margin-left: 20px !important;
 	margin-right: 20px !important;
 }
+.whiteletters p {
+	color: whitesmoke;
+}
 
 img.info {
 	width: 97%;

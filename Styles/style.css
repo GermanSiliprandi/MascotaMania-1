@@ -121,6 +121,10 @@ h1 {
 	margin-bottom: 25px !important;
 }
 
+.whiteletters p {
+	color: whitesmoke;
+}
+
 h2 {
 	color: #707070;
 }
